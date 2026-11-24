@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Kádár-rendszer bukása 1986–1989 · World Café munkalap- és dekódoló kártya stúdió</title>
+<meta name="description" content="Történelemórai World Café munkalap három asztallal (gazdaság, sajtó és nyilvánosság, politika és hatalom), dekódoló kártyákkal, ellenőrző kérdésekkel és TikTok-videótervvel – a RETÖRKI „Szó szerint” kötete alapján.">
+<meta property="og:title" content="A Kádár-rendszer bukása 1986–1989 · World Café stúdió">
+<meta property="og:description" content="Három asztal, forrásmondatok, dekódoló kártyák, azonnali javítás és 35 másodperces videóterv – nyomtatható munkalapként is.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f1e6; --paper-2:#efe7d5; --sheet:#fbf8f1; --ink:#211e1a; --ink-2:#463f36; --muted:#7a7062;
+  --rule:#d9cdb6; --rule-strong:#b9a98b;
+  --bordo:#7b1e2b; --bordo-2:#5e1520; --bordo-wash:#f3e1df;
+  --olive:#4c5634; --olive-wash:#e6e8d6;
+  --slate:#3b4550; --slate-wash:#e3e6e8;
+  --marker:#f0dc95; --marker-edge:#d8bd5c;
+  --ok:#3d6334; --ok-wash:#e4ecd9; --fix:#8d2b20; --fix-wash:#f5e0d9; --part:#8a6514; --part-wash:#f4ead0;
+  --serif:"Spectral", Georgia, "Times New Roman", serif;
+  --sans:"Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  --r:3px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;
+  background-image:radial-gradient(rgba(120,95,55,.05) 1px, transparent 1px);background-size:4px 4px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0;color:var(--ink)}
+p{margin:0 0 .7em}
+button,input,textarea,select{font:inherit;color:inherit}
+a{color:var(--bordo)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Masthead */
+.masthead{border-bottom:1px solid var(--rule-strong);background:var(--sheet)}
+.topline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:12px 0;border-bottom:1px solid var(--rule)}
+.topline b{color:var(--bordo);font-weight:700}
+.mast-grid{display:grid;grid-template-columns:1fr auto;gap:28px;padding:30px 0 26px;align-items:end}
+.kicker{font-family:var(--sans);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--bordo);font-weight:700;margin-bottom:10px}
+.masthead h1{font-size:clamp(34px,5.4vw,64px);font-weight:600;letter-spacing:-.01em}
+.masthead h1 em{font-style:italic;color:var(--bordo);font-weight:400}
+.dek{font-family:var(--serif);font-size:clamp(18px,2vw,22px);color:var(--ink-2);margin-top:14px;max-width:46ch}
+.student{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 14px;min-width:min(420px,100%)}
+.student label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block}
+.student input{width:100%;border:0;border-bottom:1px solid var(--ink-2);background:transparent;padding:4px 0;font-size:16px;outline:none}
+.student input:focus{border-color:var(--bordo)}
+.method{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);font-size:14.5px;color:var(--ink-2)}
+.method div{padding:12px 14px 14px 0;border-right:1px solid var(--rule)}
+.method div+div{padding-left:14px}
+.method div:last-child{border-right:0}
+.method b{display:block;font-family:var(--serif);font-size:15px;color:var(--ink)}
+.method span.n{font-family:var(--serif);color:var(--bordo);font-weight:700;margin-right:4px}
+
+/* Controls */
+.controls{position:sticky;top:0;z-index:20;background:rgba(246,241,230,.97);border-bottom:1px solid var(--rule-strong)}
+.controls .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-top:10px;padding-bottom:10px}
+.ctl-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.seg{display:inline-flex;border:1px solid var(--ink-2);border-radius:var(--r);overflow:hidden;background:var(--sheet)}
+.seg button{border:0;background:transparent;padding:7px 12px;cursor:pointer;font-size:15px;border-right:1px solid var(--rule-strong);white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--sheet)}
+.seg button .tn{font-family:var(--serif);font-weight:700;margin-right:5px}
+.seg button:hover:not([aria-pressed="true"]){background:var(--paper-2)}
+.tables-seg button[aria-pressed="true"]{background:var(--bordo)}
+.ctl-group{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.spacer{flex:1}
+.btn{border:1px solid var(--ink-2);background:var(--sheet);border-radius:var(--r);padding:7px 13px;cursor:pointer;font-size:15px;line-height:1.2}
+.btn:hover{background:var(--paper-2)}
+.btn.primary{background:var(--bordo);border-color:var(--bordo);color:var(--sheet)}
+.btn.primary:hover{background:var(--bordo-2)}
+.btn.ghost{border-color:transparent;background:transparent;text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
+.btn.small{padding:5px 10px;font-size:14px}
+.toggle{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:15px;user-select:none}
+.toggle input{accent-color:var(--bordo);width:17px;height:17px}
+
+/* Table sections */
+main{padding:26px 0 60px}
+.table{background:var(--sheet);border:1px solid var(--rule-strong);margin:0 0 36px;box-shadow:0 1px 0 var(--rule),0 18px 30px -28px rgba(60,40,20,.45)}
+.table[hidden]{display:none}
+.t-head{display:grid;grid-template-columns:auto 1fr;gap:0 26px;padding:28px 32px 22px;border-bottom:3px double var(--rule-strong)}
+.t-num{font-family:var(--serif);font-size:84px;line-height:.85;color:var(--bordo);font-weight:600}
+.t-num small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:10px;text-align:center}
+.t-theme{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--olive);margin-bottom:6px}
+.t-head h2{font-size:clamp(25px,3.2vw,38px)}
+.t-lead{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ink-2);margin:12px 0 0;max-width:62ch}
+.t-body{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:0}
+.col-src{padding:24px 30px 30px 32px;border-right:1px solid var(--rule)}
+.col-aside{padding:24px 32px 30px 28px;background:linear-gradient(var(--paper-2),var(--paper-2)) 0 0/100% 0 no-repeat}
+.sec-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-bottom:1px solid var(--ink);padding-bottom:6px;margin-bottom:14px}
+.sec-title h3{font-size:22px}
+.sec-title .hint{font-size:13.5px;color:var(--muted);text-align:right}
+.note{font-size:13.5px;color:var(--muted);border-left:2px solid var(--rule-strong);padding:2px 0 2px 10px;margin:0 0 18px}
+.note .vb{font-size:inherit}
+
+/* Sources */
+.source{margin:0 0 26px}
+.src-head{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:4px}
+.src-tag{font-family:var(--serif);font-weight:700;color:var(--bordo);font-size:15px;white-space:nowrap}
+.src-head h4{font-size:19px}
+.src-ctx{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.dialogue{border-left:1px solid var(--rule-strong);padding-left:16px;margin-left:2px}
+.line{display:grid;grid-template-columns:128px 1fr;gap:12px;margin:0 0 10px;font-family:var(--serif);font-size:17.5px;line-height:1.6}
+.speaker{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);padding-top:4px;line-height:1.3}
+.s{cursor:pointer;border-radius:2px;padding:1px 0;transition:background-color .15s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.s:hover{background:rgba(240,220,149,.45)}
+.s:focus-visible{outline:2px solid var(--bordo);outline-offset:1px}
+.s.hl{background:var(--marker);box-shadow:inset 0 -2px 0 var(--marker-edge)}
+.vb{text-decoration:underline;text-decoration-color:var(--bordo);text-decoration-thickness:1px;text-underline-offset:3px;font-style:italic}
+body.teacher .s.key{box-shadow:inset 2px 0 0 var(--bordo)}
+body.teacher .s.key::after{content:" ◆";color:var(--bordo);font-size:.7em;vertical-align:super}
+.hl-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--ink-2);background:var(--paper);border:1px dashed var(--rule-strong);padding:8px 12px;margin-top:6px}
+.hl-bar .count{font-weight:700;color:var(--bordo)}
+
+/* Decoder card */
+.card{border:1.5px solid var(--ink);background:var(--sheet);position:relative;margin-bottom:26px}
+.card::before{content:"";position:absolute;inset:5px;border:1px dashed var(--rule-strong);pointer-events:none}
+.card-head{background:var(--ink);color:var(--sheet);padding:10px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card-head h3{color:var(--sheet);font-size:19px}
+.card-head span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+.card-body{padding:12px 16px 14px}
+.grp{margin:8px 0 4px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--olive);display:flex;align-items:center;gap:8px}
+.grp::after{content:"";flex:1;border-top:1px solid var(--rule)}
+.term{display:grid;grid-template-columns:20px 1fr;gap:4px 8px;padding:7px 0;border-bottom:1px dotted var(--rule);cursor:pointer}
+.term:last-child{border-bottom:0}
+.term input{accent-color:var(--bordo);margin-top:5px;width:16px;height:16px}
+.term b{font-family:var(--serif);font-size:16.5px;font-weight:600}
+.term .def{grid-column:2;font-size:14.5px;color:var(--ink-2);line-height:1.45}
+.term .src-only{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-left:6px;font-family:var(--sans);font-weight:600}
+.term.on b{color:var(--bordo)}
+.card-foot{font-size:13px;color:var(--muted);padding:0 16px 12px}
+
+/* Quiz */
+.quiz{border-top:1px solid var(--ink);padding-top:12px}
+.quiz h3{font-size:20px;margin-bottom:4px}
+.quiz .q{font-family:var(--serif);font-size:17.5px;margin:6px 0 10px}
+.opt{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:9px 10px;border:1px solid var(--rule);background:var(--sheet);margin-bottom:6px;cursor:pointer;font-size:15.5px;line-height:1.45;border-radius:var(--r)}
+.opt:hover{border-color:var(--rule-strong)}
+.opt input{accent-color:var(--bordo);margin-top:4px}
+.opt .letter{font-family:var(--serif);font-weight:700;color:var(--bordo);margin-right:4px}
+.opt.is-correct{border-color:var(--ok);background:var(--ok-wash)}
+.opt.is-wrong{border-color:var(--fix);background:var(--fix-wash)}
+
+/* Feedback */
+.fb{margin-top:10px;border:1px solid;padding:12px 14px;font-size:15.5px;border-radius:var(--r);line-height:1.5}
+.fb[hidden]{display:none}
+.fb .fb-title{font-family:var(--serif);font-weight:700;font-size:17px;display:block;margin-bottom:4px}
+.fb.ok{border-color:var(--ok);background:var(--ok-wash)} .fb.ok .fb-title{color:var(--ok)}
+.fb.fix{border-color:var(--fix);background:var(--fix-wash)} .fb.fix .fb-title{color:var(--fix)}
+.fb.part{border-color:var(--part);background:var(--part-wash)} .fb.part .fb-title{color:var(--part)}
+.fb ul{margin:6px 0 8px;padding-left:0;list-style:none}
+.fb li{padding-left:22px;position:relative;margin-bottom:3px}
+.fb li::before{position:absolute;left:0;font-weight:700}
+.fb li.y::before{content:"✓";color:var(--ok)} .fb li.n::before{content:"✗";color:var(--fix)}
+.fb .key-box{border-top:1px solid rgba(0,0,0,.15);margin-top:8px;padding-top:8px}
+.fb .key-box b{font-family:var(--sans)}
+.fb q,.keyq{font-family:var(--serif);font-style:italic}
+
+/* Worksheet */
+.worksheet{border-top:3px double var(--rule-strong);padding:24px 32px 32px}
+.ws-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--ink);padding-bottom:6px;margin-bottom:18px}
+.ws-head h3{font-size:24px}
+.tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px}
+.task{min-width:0}
+.task.wide{grid-column:1/-1}
+.task-h{display:flex;gap:10px;align-items:baseline;margin-bottom:8px}
+.task-h .n{font-family:var(--serif);font-size:30px;line-height:1;color:var(--bordo);font-weight:600}
+.task-h h4{font-size:19px}
+.task-h p{margin:2px 0 0;font-size:14.5px;color:var(--ink-2)}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--ink-2);margin-bottom:4px}
+.field label .t{font-weight:400;color:var(--muted);letter-spacing:0}
+textarea,.field input[type=text]{width:100%;border:1px solid var(--rule-strong);background:var(--sheet);border-radius:var(--r);padding:9px 11px;font-size:16px;line-height:1.5;outline:none;resize:vertical;
+  background-image:linear-gradient(transparent calc(1.5em + 8px), var(--rule) 0);background-size:100% 1.5em;background-position:0 1px;background-attachment:local}
+textarea{min-height:84px}
+textarea:focus,.field input[type=text]:focus{border-color:var(--bordo);box-shadow:0 0 0 2px var(--bordo-wash)}
+.field input[type=text]{background-image:none}
+.pv{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;min-height:28px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--rule-strong);background:var(--paper);padding:3px 9px;border-radius:2px;font-size:14px;max-width:100%}
+.chip.q{font-family:var(--serif);font-style:italic;background:var(--marker);border-color:var(--marker-edge)}
+.chip button{border:0;background:none;cursor:pointer;padding:0 2px;color:var(--muted);font-size:15px;line-height:1}
+.chips .empty{font-size:14px;color:var(--muted);font-style:italic}
+.row-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+
+/* TikTok plan */
+.tt{border:1px solid var(--ink);padding:16px 18px 18px;background:var(--paper)}
+.timeline{display:grid;grid-template-columns:5fr 15fr 8fr 7fr;border:1px solid var(--ink);margin:6px 0 4px;font-size:12.5px;text-transform:uppercase;letter-spacing:.06em}
+.timeline div{padding:6px 8px;border-right:1px solid var(--ink);background:var(--sheet);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.timeline div:last-child{border-right:0}
+.timeline div:nth-child(1){background:var(--bordo-wash)} .timeline div:nth-child(2){background:var(--marker)} .timeline div:nth-child(3){background:var(--olive-wash)} .timeline div:nth-child(4){background:var(--slate-wash)}
+.ticks{display:grid;grid-template-columns:5fr 15fr 8fr 7fr;font-size:11.5px;color:var(--muted);margin-bottom:12px}
+.ticks span{border-left:1px solid var(--rule-strong);padding-left:4px}
+.tt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+.tt-grid .full{grid-column:1/-1}
+.meter{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-2);margin:4px 0 10px}
+.meter .bar{flex:1;height:8px;border:1px solid var(--ink-2);position:relative;background:var(--sheet);max-width:320px}
+.meter .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--olive)}
+.meter .bar i.over{background:var(--fix)}
+.meter b{font-family:var(--serif)}
+
+/* Teacher key */
+.tkey{display:none;border-top:3px double var(--rule-strong);background:var(--bordo-wash);padding:20px 32px 24px}
+body.teacher .tkey{display:block}
+.tkey h3{font-size:21px;color:var(--bordo);margin-bottom:10px}
+.tkey dl{margin:0;display:grid;grid-template-columns:200px 1fr;gap:8px 18px;font-size:15.5px}
+.tkey dt{font-weight:700;color:var(--bordo-2)}
+.tkey dd{margin:0}
+
+/* Dialog */
+dialog{border:1px solid var(--ink);background:var(--sheet);color:var(--ink);padding:0;max-width:min(560px,94vw);width:100%;border-radius:var(--r)}
+dialog::backdrop{background:rgba(33,30,26,.45)}
+.dlg-head{background:var(--ink);color:var(--sheet);padding:12px 18px;display:flex;justify-content:space-between;align-items:center}
+.dlg-head h3{color:var(--sheet);font-size:20px}
+.dlg-head button{background:none;border:0;color:var(--sheet);font-size:24px;cursor:pointer;line-height:1}
+.dlg-body{padding:18px}
+.qr-wrap{display:flex;justify-content:center;background:#fff;border:1px solid var(--rule);padding:14px;margin-bottom:12px}
+.qr-wrap canvas{width:300px;height:auto;max-width:100%;image-rendering:pixelated}
+.dlg-body .field input{font-family:var(--sans)}
+.warn{font-size:14px;background:var(--part-wash);border:1px solid var(--part);padding:8px 10px;margin:8px 0}
+
+footer{border-top:1px solid var(--rule-strong);padding:20px 0 40px;font-size:13.5px;color:var(--muted)}
+.print-head{display:none}
+
+/* Responsive */
+@media (max-width:1020px){
+  .t-body{grid-template-columns:1fr}
+  .col-src{border-right:0;border-bottom:1px solid var(--rule)}
+  .mast-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .controls{position:static}
+  .wrap{padding:0 14px}
+  .method{grid-template-columns:1fr 1fr}
+  .method div:nth-child(2){border-right:0}
+  .method div:nth-child(3){padding-left:0;border-top:1px solid var(--rule)}
+  .method div:nth-child(4){border-top:1px solid var(--rule)}
+  .student{grid-template-columns:1fr 1fr}
+  .student div:first-child{grid-column:1/-1}
+  .t-head{padding:20px 16px 16px;gap:0 14px}
+  .t-num{font-size:58px}
+  .col-src,.col-aside,.worksheet{padding:18px 16px 22px}
+  .tkey{padding:18px 16px}
+  .line{grid-template-columns:1fr;gap:0}
+  .speaker{padding-top:0}
+  .tasks,.tt-grid{grid-template-columns:1fr}
+  .tkey dl{grid-template-columns:1fr;gap:2px}
+  .tkey dd{margin-bottom:8px}
+  .controls .wrap{gap:8px}
+  .tables-seg{width:100%;overflow-x:auto}
+  .tables-seg button{flex:1;padding:7px 8px;font-size:14px}
+  .tables-seg button .lbl-long{display:none}
+  .spacer{display:none}
+  .timeline{font-size:10.5px}
+  .timeline div{padding:5px 4px}
+}
+@media (min-width:761px){ .tables-seg button .lbl-short{display:none} }
+
+/* Print / PDF view (used for both the on-screen preview and real printing) */
+body.printing{background:#fff}
+body.printing .controls, body.printing .no-print, body.printing .row-btns, body.printing .btn, body.printing .hl-bar, body.printing dialog, body.printing .chip button, body.printing footer{display:none!important}
+body.printing .preview-bar{display:flex!important}
+body.printing .masthead{background:#fff}
+body.printing .method{display:none}
+body.printing .print-head{display:flex;justify-content:space-between;gap:16px;align-items:center;border:1px solid var(--ink);padding:8px 12px;margin:14px 0 0;font-size:13px}
+body.printing .print-head img{width:78px;height:78px}
+body.printing .table{box-shadow:none;border-color:var(--ink);background:#fff}
+body.printing textarea, body.printing .field input[type=text], body.printing .student input{display:none}
+body.printing .pv{display:block;min-height:3.2em;border-bottom:1px solid var(--ink-2);padding:4px 2px;white-space:pre-wrap;font-size:15px;line-height:1.6;
+  background-image:linear-gradient(transparent calc(1.6em - 1px), var(--rule) 0);background-size:100% 1.6em}
+body.printing .pv.short{min-height:1.8em}
+body.printing .opt input{display:none}
+body.printing .opt{grid-template-columns:1fr}
+body.printing .col-aside{background:#fff}
+body.printing .tt{background:#fff}
+.preview-bar{display:none;position:sticky;top:0;z-index:30;background:var(--ink);color:var(--sheet);padding:10px 18px;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:15px}
+.preview-bar .btn{display:inline-block!important;background:var(--sheet);color:var(--ink)}
+@media print{
+  @page{size:A4;margin:12mm 12mm 14mm}
+  html,body{background:#fff!important;font-size:11pt}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body.printing .preview-bar, .preview-bar{display:none!important}
+  .line{font-size:11.5pt;line-height:1.5;grid-template-columns:105px 1fr}
+  .term .def,.opt,.fb{font-size:10pt}
+  .mast-grid{grid-template-columns:1fr;gap:10px}
+  .student{min-width:0}
+  .dek{font-size:13pt}
+  .wrap{max-width:none;padding:0}
+  main{padding:10px 0 0}
+  .table{margin:0;break-after:page;border:0}
+  .table:last-of-type{break-after:auto}
+  .t-body{grid-template-columns:1fr}
+  .col-src{border-right:0}
+  .line,.src-head,.term,.opt,.fb,.task-h,.field{break-inside:avoid}
+  .src-head{break-after:avoid}
+  .card,.quiz{break-inside:avoid}
+  .masthead{border:0}
+  .mast-grid{padding:12px 0}
+  .masthead h1{font-size:30pt}
+  .topline{padding:4px 0}
+  .s.hl{background:var(--marker)!important}
+}
+</style>
+</head>
+<body>
+<div class="preview-bar" id="previewBar">
+  <span>Nyomtatási nézet – így kerül papírra vagy PDF-be a munkalap.</span>
+  <button class="btn" type="button" data-act="print">Nyomtatás / PDF mentése</button>
+  <button class="btn" type="button" data-act="preview-off">Vissza a szerkesztéshez</button>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="topline"><span><b>Történelem</b> · World Café · forráselemző műhely</span><span>Munkalap és dekódoló kártya stúdió</span></div>
+    <div class="mast-grid">
+      <div>
+        <div class="kicker">MSZMP-viták szó szerint · 1986–1989</div>
+        <h1>A Kádár-rendszer <em>bukása</em></h1>
+        <p class="dek">Három asztal, három nézőpont: hogyan beszélt a pártvezetés zárt ajtók mögött az adósságról, a nyilvánosságról és a hatalomról? A RETÖRKI „Szó szerint” kötete alapján.</p>
+      </div>
+      <div class="student" aria-label="Tanulói adatok">
+        <div><label for="st-name">Név / csoport tagjai</label><input id="st-name" data-store="st-name" type="text" autocomplete="off"><div class="pv short" data-pv="st-name"></div></div>
+        <div><label for="st-class">Osztály</label><input id="st-class" data-store="st-class" type="text" autocomplete="off"><div class="pv short" data-pv="st-class"></div></div>
+        <div><label for="st-date">Dátum</label><input id="st-date" data-store="st-date" type="text" autocomplete="off"><div class="pv short" data-pv="st-date"></div></div>
+      </div>
+    </div>
+    <div class="method no-print">
+      <div><span class="n">1</span><b>Olvass és jelölj</b>Kattints a forrásmondatokra: a kiemelt mondatok a feladatlapba kerülnek.</div>
+      <div><span class="n">2</span><b>Dekódolj</b>A kártya megmagyarázza a szereplőket és fogalmakat. Jelölj ki legalább kettőt.</div>
+      <div><span class="n">3</span><b>Ellenőrizz</b>A gyors kérdés és a feladatok azonnal mutatják a helyes megoldást.</div>
+      <div><span class="n">4</span><b>Forgass</b>Asztalváltáskor az asztalgazda marad, és egy percben összefoglal.</div>
+    </div>
+    <div class="print-head" id="printHead">
+      <div><b>A Kádár-rendszer bukása (1986–1989)</b> · World Café munkalap<br><span id="printWho"></span></div>
+      <div style="display:flex;align-items:center;gap:10px"><span style="text-align:right">Digitális változat:<br><span id="printUrl"></span></span><img id="printQr" alt="QR-kód a digitális munkalaphoz"></div>
+    </div>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Asztal- és nézetváltó">
+  <div class="wrap">
+    <div class="ctl-group">
+      <span class="ctl-label">Asztal</span>
+      <div class="seg tables-seg" role="group" aria-label="Asztalváltó" id="tableSeg"></div>
+    </div>
+    <div class="ctl-group">
+      <span class="ctl-label">Nézet</span>
+      <div class="seg" role="group" aria-label="Nézetváltó">
+        <button type="button" data-view="one" aria-pressed="true">Egy asztal</button>
+        <button type="button" data-view="all" aria-pressed="false">Mind a 3 asztal</button>
+      </div>
+    </div>
+    <label class="toggle"><input type="checkbox" id="teacherToggle"> Tanári javítókulcs</label>
+    <span class="spacer"></span>
+    <div class="ctl-group">
+      <button class="btn" type="button" data-act="preview-on">Nyomtatási nézet</button>
+      <button class="btn primary" type="button" data-act="print">Nyomtatás / PDF</button>
+      <button class="btn" type="button" data-act="qr">QR-kód</button>
+      <button class="btn ghost small" type="button" data-act="reset">Minden törlése</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="tables"></main>
+
+<footer>
+  <div class="wrap">
+    <p>Forrásalap: Retörki – „Szó szerint” (az MSZMP vezető testületeinek vitái, 1986–1989). A forrásrészletek órai használatra rövidített, szerkesztett átiratok; az aláhúzott, dőlt kifejezések a kötet kulcsidézetei. Pontos idézéshez és hivatkozáshoz vesse össze a kötet szövegével.</p>
+    <p>A beírt válaszok csak ezen az eszközön, a böngészőben tárolódnak.</p>
+  </div>
+</footer>
+
+<dialog id="qrDialog" aria-labelledby="qrTitle">
+  <div class="dlg-head"><h3 id="qrTitle">QR-kód a munkalaphoz</h3><button type="button" data-act="qr-close" aria-label="Bezárás">×</button></div>
+  <div class="dlg-body">
+    <div class="qr-wrap"><canvas id="qrCanvas" width="10" height="10" aria-label="QR-kód"></canvas></div>
+    <div class="field"><label for="qrUrl">Erre a címre mutat <span class="t">(átírható, ha máshol is elérhető az oldal)</span></label><input id="qrUrl" type="text" spellcheck="false"></div>
+    <div class="warn" id="qrWarn" hidden>Ez a cím csak a saját gépeden működik. Írd be az oldal nyilvános címét, hogy a diákok telefonja is megnyissa.</div>
+    <div class="row-btns" style="display:flex">
+      <button class="btn primary" type="button" data-act="qr-download">PNG letöltése</button>
+      <button class="btn" type="button" data-act="qr-copy">Cím másolása</button>
+      <button class="btn" type="button" data-act="qr-print">QR nyomtatása</button>
+    </div>
+  </div>
+</dialog>
+
+<script>/* QR Code Generator for JavaScript – (c) 2009 Kazuhiko Arase, MIT licence */
+var qrcode=function(){var t=function(t,r){var e=t,n=g[r],o=null,i=0,a=null,u=[],f={},c=function(t,r){o=function(t){for(var r=new Array(t),e=0;e<t;e+=1){r[e]=new Array(t);for(var n=0;n<t;n+=1)r[e][n]=null}return r}(i=4*e+17),l(0,0),l(i-7,0),l(0,i-7),s(),h(),d(t,r),e>=7&&v(t),null==a&&(a=p(e,n,u)),w(a,r)},l=function(t,r){for(var e=-1;e<=7;e+=1)if(!(t+e<=-1||i<=t+e))for(var n=-1;n<=7;n+=1)r+n<=-1||i<=r+n||(o[t+e][r+n]=0<=e&&e<=6&&(0==n||6==n)||0<=n&&n<=6&&(0==e||6==e)||2<=e&&e<=4&&2<=n&&n<=4)},h=function(){for(var t=8;t<i-8;t+=1)null==o[t][6]&&(o[t][6]=t%2==0);for(var r=8;r<i-8;r+=1)null==o[6][r]&&(o[6][r]=r%2==0)},s=function(){for(var t=B.getPatternPosition(e),r=0;r<t.length;r+=1)for(var n=0;n<t.length;n+=1){var i=t[r],a=t[n];if(null==o[i][a])for(var u=-2;u<=2;u+=1)for(var f=-2;f<=2;f+=1)o[i+u][a+f]=-2==u||2==u||-2==f||2==f||0==u&&0==f}},v=function(t){for(var r=B.getBCHTypeNumber(e),n=0;n<18;n+=1){var a=!t&&1==(r>>n&1);o[Math.floor(n/3)][n%3+i-8-3]=a}for(n=0;n<18;n+=1){a=!t&&1==(r>>n&1);o[n%3+i-8-3][Math.floor(n/3)]=a}},d=function(t,r){for(var e=n<<3|r,a=B.getBCHTypeInfo(e),u=0;u<15;u+=1){var f=!t&&1==(a>>u&1);u<6?o[u][8]=f:u<8?o[u+1][8]=f:o[i-15+u][8]=f}for(u=0;u<15;u+=1){f=!t&&1==(a>>u&1);u<8?o[8][i-u-1]=f:u<9?o[8][15-u-1+1]=f:o[8][15-u-1]=f}o[i-8][8]=!t},w=function(t,r){for(var e=-1,n=i-1,a=7,u=0,f=B.getMaskFunction(r),c=i-1;c>0;c-=2)for(6==c&&(c-=1);;){for(var g=0;g<2;g+=1)if(null==o[n][c-g]){var l=!1;u<t.length&&(l=1==(t[u]>>>a&1)),f(n,c-g)&&(l=!l),o[n][c-g]=l,-1==(a-=1)&&(u+=1,a=7)}if((n+=e)<0||i<=n){n-=e,e=-e;break}}},p=function(t,r,e){for(var n=A.getRSBlocks(t,r),o=b(),i=0;i<e.length;i+=1){var a=e[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var u=0;for(i=0;i<n.length;i+=1)u+=n[i].dataCount;if(o.getLengthInBits()>8*u)throw"code length overflow. ("+o.getLengthInBits()+">"+8*u+")";for(o.getLengthInBits()+4<=8*u&&o.put(0,4);o.getLengthInBits()%8!=0;)o.putBit(!1);for(;!(o.getLengthInBits()>=8*u||(o.put(236,8),o.getLengthInBits()>=8*u));)o.put(17,8);return function(t,r){for(var e=0,n=0,o=0,i=new Array(r.length),a=new Array(r.length),u=0;u<r.length;u+=1){var f=r[u].dataCount,c=r[u].totalCount-f;n=Math.max(n,f),o=Math.max(o,c),i[u]=new Array(f);for(var g=0;g<i[u].length;g+=1)i[u][g]=255&t.getBuffer()[g+e];e+=f;var l=B.getErrorCorrectPolynomial(c),h=k(i[u],l.getLength()-1).mod(l);for(a[u]=new Array(l.getLength()-1),g=0;g<a[u].length;g+=1){var s=g+h.getLength()-a[u].length;a[u][g]=s>=0?h.getAt(s):0}}var v=0;for(g=0;g<r.length;g+=1)v+=r[g].totalCount;var d=new Array(v),w=0;for(g=0;g<n;g+=1)for(u=0;u<r.length;u+=1)g<i[u].length&&(d[w]=i[u][g],w+=1);for(g=0;g<o;g+=1)for(u=0;u<r.length;u+=1)g<a[u].length&&(d[w]=a[u][g],w+=1);return d}(o,n)};f.addData=function(t,r){var e=null;switch(r=r||"Byte"){case"Numeric":e=M(t);break;case"Alphanumeric":e=x(t);break;case"Byte":e=m(t);break;case"Kanji":e=L(t);break;default:throw"mode:"+r}u.push(e),a=null},f.isDark=function(t,r){if(t<0||i<=t||r<0||i<=r)throw t+","+r;return o[t][r]},f.getModuleCount=function(){return i},f.make=function(){if(e<1){for(var t=1;t<40;t++){for(var r=A.getRSBlocks(t,n),o=b(),i=0;i<u.length;i++){var a=u[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var g=0;for(i=0;i<r.length;i++)g+=r[i].dataCount;if(o.getLengthInBits()<=8*g)break}e=t}c(!1,function(){for(var t=0,r=0,e=0;e<8;e+=1){c(!0,e);var n=B.getLostPoint(f);(0==e||t>n)&&(t=n,r=e)}return r}())},f.createTableTag=function(t,r){t=t||2;var e="";e+='<table style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: "+(r=void 0===r?4*t:r)+"px;",e+='">',e+="<tbody>";for(var n=0;n<f.getModuleCount();n+=1){e+="<tr>";for(var o=0;o<f.getModuleCount();o+=1)e+='<td style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: 0px;",e+=" width: "+t+"px;",e+=" height: "+t+"px;",e+=" background-color: ",e+=f.isDark(n,o)?"#000000":"#ffffff",e+=";",e+='"/>';e+="</tr>"}return e+="</tbody>",e+="</table>"},f.createSvgTag=function(t,r,e,n){var o={};"object"==typeof arguments[0]&&(t=(o=arguments[0]).cellSize,r=o.margin,e=o.alt,n=o.title),t=t||2,r=void 0===r?4*t:r,(e="string"==typeof e?{text:e}:e||{}).text=e.text||null,e.id=e.text?e.id||"qrcode-description":null,(n="string"==typeof n?{text:n}:n||{}).text=n.text||null,n.id=n.text?n.id||"qrcode-title":null;var i,a,u,c,g=f.getModuleCount()*t+2*r,l="";for(c="l"+t+",0 0,"+t+" -"+t+",0 0,-"+t+"z ",l+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',l+=o.scalable?"":' width="'+g+'px" height="'+g+'px"',l+=' viewBox="0 0 '+g+" "+g+'" ',l+=' preserveAspectRatio="xMinYMin meet"',l+=n.text||e.text?' role="img" aria-labelledby="'+y([n.id,e.id].join(" ").trim())+'"':"",l+=">",l+=n.text?'<title id="'+y(n.id)+'">'+y(n.text)+"</title>":"",l+=e.text?'<description id="'+y(e.id)+'">'+y(e.text)+"</description>":"",l+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',l+='<path d="',a=0;a<f.getModuleCount();a+=1)for(u=a*t+r,i=0;i<f.getModuleCount();i+=1)f.isDark(a,i)&&(l+="M"+(i*t+r)+","+u+c);return l+='" stroke="transparent" fill="black"/>',l+="</svg>"},f.createDataURL=function(t,r){t=t||2,r=void 0===r?4*t:r;var e=f.getModuleCount()*t+2*r,n=r,o=e-r;return I(e,e,function(r,e){if(n<=r&&r<o&&n<=e&&e<o){var i=Math.floor((r-n)/t),a=Math.floor((e-n)/t);return f.isDark(a,i)?0:1}return 1})},f.createImgTag=function(t,r,e){t=t||2,r=void 0===r?4*t:r;var n=f.getModuleCount()*t+2*r,o="";return o+="<img",o+=' src="',o+=f.createDataURL(t,r),o+='"',o+=' width="',o+=n,o+='"',o+=' height="',o+=n,o+='"',e&&(o+=' alt="',o+=y(e),o+='"'),o+="/>"};var y=function(t){for(var r="",e=0;e<t.length;e+=1){var n=t.charAt(e);switch(n){case"<":r+="&lt;";break;case">":r+="&gt;";break;case"&":r+="&amp;";break;case'"':r+="&quot;";break;default:r+=n}}return r};return f.createASCII=function(t,r){if((t=t||1)<2)return function(t){t=void 0===t?2:t;var r,e,n,o,i,a=1*f.getModuleCount()+2*t,u=t,c=a-t,g={"██":"█","█ ":"▀"," █":"▄","  ":" "},l={"██":"▀","█ ":"▀"," █":" ","  ":" "},h="";for(r=0;r<a;r+=2){for(n=Math.floor((r-u)/1),o=Math.floor((r+1-u)/1),e=0;e<a;e+=1)i="█",u<=e&&e<c&&u<=r&&r<c&&f.isDark(n,Math.floor((e-u)/1))&&(i=" "),u<=e&&e<c&&u<=r+1&&r+1<c&&f.isDark(o,Math.floor((e-u)/1))?i+=" ":i+="█",h+=t<1&&r+1>=c?l[i]:g[i];h+="\n"}return a%2&&t>0?h.substring(0,h.length-a-1)+Array(a+1).join("▀"):h.substring(0,h.length-1)}(r);t-=1,r=void 0===r?2*t:r;var e,n,o,i,a=f.getModuleCount()*t+2*r,u=r,c=a-r,g=Array(t+1).join("██"),l=Array(t+1).join("  "),h="",s="";for(e=0;e<a;e+=1){for(o=Math.floor((e-u)/t),s="",n=0;n<a;n+=1)i=1,u<=n&&n<c&&u<=e&&e<c&&f.isDark(o,Math.floor((n-u)/t))&&(i=0),s+=i?g:l;for(o=0;o<t;o+=1)h+=s+"\n"}return h.substring(0,h.length-1)},f.renderTo2dContext=function(t,r){r=r||2;for(var e=f.getModuleCount(),n=0;n<e;n++)for(var o=0;o<e;o++)t.fillStyle=f.isDark(n,o)?"black":"white",t.fillRect(n*r,o*r,r,r)},f};t.stringToBytes=(t.stringToBytesFuncs={default:function(t){for(var r=[],e=0;e<t.length;e+=1){var n=t.charCodeAt(e);r.push(255&n)}return r}}).default,t.createStringToBytes=function(t,r){var e=function(){for(var e=S(t),n=function(){var t=e.read();if(-1==t)throw"eof";return t},o=0,i={};;){var a=e.read();if(-1==a)break;var u=n(),f=n()<<8|n();i[String.fromCharCode(a<<8|u)]=f,o+=1}if(o!=r)throw o+" != "+r;return i}(),n="?".charCodeAt(0);return function(t){for(var r=[],o=0;o<t.length;o+=1){var i=t.charCodeAt(o);if(i<128)r.push(i);else{var a=e[t.charAt(o)];"number"==typeof a?(255&a)==a?r.push(a):(r.push(a>>>8),r.push(255&a)):r.push(n)}}return r}};var r,e,n,o,i,a=1,u=2,f=4,c=8,g={L:1,M:0,Q:3,H:2},l=0,h=1,s=2,v=3,d=4,w=5,p=6,y=7,B=(r=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],e=1335,n=7973,i=function(t){for(var r=0;0!=t;)r+=1,t>>>=1;return r},(o={}).getBCHTypeInfo=function(t){for(var r=t<<10;i(r)-i(e)>=0;)r^=e<<i(r)-i(e);return 21522^(t<<10|r)},o.getBCHTypeNumber=function(t){for(var r=t<<12;i(r)-i(n)>=0;)r^=n<<i(r)-i(n);return t<<12|r},o.getPatternPosition=function(t){return r[t-1]},o.getMaskFunction=function(t){switch(t){case l:return function(t,r){return(t+r)%2==0};case h:return function(t,r){return t%2==0};case s:return function(t,r){return r%3==0};case v:return function(t,r){return(t+r)%3==0};case d:return function(t,r){return(Math.floor(t/2)+Math.floor(r/3))%2==0};case w:return function(t,r){return t*r%2+t*r%3==0};case p:return function(t,r){return(t*r%2+t*r%3)%2==0};case y:return function(t,r){return(t*r%3+(t+r)%2)%2==0};default:throw"bad maskPattern:"+t}},o.getErrorCorrectPolynomial=function(t){for(var r=k([1],0),e=0;e<t;e+=1)r=r.multiply(k([1,C.gexp(e)],0));return r},o.getLengthInBits=function(t,r){if(1<=r&&r<10)switch(t){case a:return 10;case u:return 9;case f:case c:return 8;default:throw"mode:"+t}else if(r<27)switch(t){case a:return 12;case u:return 11;case f:return 16;case c:return 10;default:throw"mode:"+t}else{if(!(r<41))throw"type:"+r;switch(t){case a:return 14;case u:return 13;case f:return 16;case c:return 12;default:throw"mode:"+t}}},o.getLostPoint=function(t){for(var r=t.getModuleCount(),e=0,n=0;n<r;n+=1)for(var o=0;o<r;o+=1){for(var i=0,a=t.isDark(n,o),u=-1;u<=1;u+=1)if(!(n+u<0||r<=n+u))for(var f=-1;f<=1;f+=1)o+f<0||r<=o+f||0==u&&0==f||a==t.isDark(n+u,o+f)&&(i+=1);i>5&&(e+=3+i-5)}for(n=0;n<r-1;n+=1)for(o=0;o<r-1;o+=1){var c=0;t.isDark(n,o)&&(c+=1),t.isDark(n+1,o)&&(c+=1),t.isDark(n,o+1)&&(c+=1),t.isDark(n+1,o+1)&&(c+=1),0!=c&&4!=c||(e+=3)}for(n=0;n<r;n+=1)for(o=0;o<r-6;o+=1)t.isDark(n,o)&&!t.isDark(n,o+1)&&t.isDark(n,o+2)&&t.isDark(n,o+3)&&t.isDark(n,o+4)&&!t.isDark(n,o+5)&&t.isDark(n,o+6)&&(e+=40);for(o=0;o<r;o+=1)for(n=0;n<r-6;n+=1)t.isDark(n,o)&&!t.isDark(n+1,o)&&t.isDark(n+2,o)&&t.isDark(n+3,o)&&t.isDark(n+4,o)&&!t.isDark(n+5,o)&&t.isDark(n+6,o)&&(e+=40);var g=0;for(o=0;o<r;o+=1)for(n=0;n<r;n+=1)t.isDark(n,o)&&(g+=1);return e+=Math.abs(100*g/r/r-50)/5*10},o),C=function(){for(var t=new Array(256),r=new Array(256),e=0;e<8;e+=1)t[e]=1<<e;for(e=8;e<256;e+=1)t[e]=t[e-4]^t[e-5]^t[e-6]^t[e-8];for(e=0;e<255;e+=1)r[t[e]]=e;var n={glog:function(t){if(t<1)throw"glog("+t+")";return r[t]},gexp:function(r){for(;r<0;)r+=255;for(;r>=256;)r-=255;return t[r]}};return n}();function k(t,r){if(void 0===t.length)throw t.length+"/"+r;var e=function(){for(var e=0;e<t.length&&0==t[e];)e+=1;for(var n=new Array(t.length-e+r),o=0;o<t.length-e;o+=1)n[o]=t[o+e];return n}(),n={getAt:function(t){return e[t]},getLength:function(){return e.length},multiply:function(t){for(var r=new Array(n.getLength()+t.getLength()-1),e=0;e<n.getLength();e+=1)for(var o=0;o<t.getLength();o+=1)r[e+o]^=C.gexp(C.glog(n.getAt(e))+C.glog(t.getAt(o)));return k(r,0)},mod:function(t){if(n.getLength()-t.getLength()<0)return n;for(var r=C.glog(n.getAt(0))-C.glog(t.getAt(0)),e=new Array(n.getLength()),o=0;o<n.getLength();o+=1)e[o]=n.getAt(o);for(o=0;o<t.getLength();o+=1)e[o]^=C.gexp(C.glog(t.getAt(o))+r);return k(e,0).mod(t)}};return n}var A=function(){var t=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],r=function(t,r){var e={};return e.totalCount=t,e.dataCount=r,e},e={};return e.getRSBlocks=function(e,n){var o=function(r,e){switch(e){case g.L:return t[4*(r-1)+0];case g.M:return t[4*(r-1)+1];case g.Q:return t[4*(r-1)+2];case g.H:return t[4*(r-1)+3];default:return}}(e,n);if(void 0===o)throw"bad rs block @ typeNumber:"+e+"/errorCorrectionLevel:"+n;for(var i=o.length/3,a=[],u=0;u<i;u+=1)for(var f=o[3*u+0],c=o[3*u+1],l=o[3*u+2],h=0;h<f;h+=1)a.push(r(c,l));return a},e}(),b=function(){var t=[],r=0,e={getBuffer:function(){return t},getAt:function(r){var e=Math.floor(r/8);return 1==(t[e]>>>7-r%8&1)},put:function(t,r){for(var n=0;n<r;n+=1)e.putBit(1==(t>>>r-n-1&1))},getLengthInBits:function(){return r},putBit:function(e){var n=Math.floor(r/8);t.length<=n&&t.push(0),e&&(t[n]|=128>>>r%8),r+=1}};return e},M=function(t){var r=a,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+2<r.length;)t.put(o(r.substring(n,n+3)),10),n+=3;n<r.length&&(r.length-n==1?t.put(o(r.substring(n,n+1)),4):r.length-n==2&&t.put(o(r.substring(n,n+2)),7))}},o=function(t){for(var r=0,e=0;e<t.length;e+=1)r=10*r+i(t.charAt(e));return r},i=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);throw"illegal char :"+t};return n},x=function(t){var r=u,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+1<r.length;)t.put(45*o(r.charAt(n))+o(r.charAt(n+1)),11),n+=2;n<r.length&&t.put(o(r.charAt(n)),6)}},o=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);if("A"<=t&&t<="Z")return t.charCodeAt(0)-"A".charCodeAt(0)+10;switch(t){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+t}};return n},m=function(r){var e=f,n=t.stringToBytes(r),o={getMode:function(){return e},getLength:function(t){return n.length},write:function(t){for(var r=0;r<n.length;r+=1)t.put(n[r],8)}};return o},L=function(r){var e=c,n=t.stringToBytesFuncs.SJIS;if(!n)throw"sjis not supported.";!function(){var t=n("友");if(2!=t.length||38726!=(t[0]<<8|t[1]))throw"sjis not supported."}();var o=n(r),i={getMode:function(){return e},getLength:function(t){return~~(o.length/2)},write:function(t){for(var r=o,e=0;e+1<r.length;){var n=(255&r[e])<<8|255&r[e+1];if(33088<=n&&n<=40956)n-=33088;else{if(!(57408<=n&&n<=60351))throw"illegal char at "+(e+1)+"/"+n;n-=49472}n=192*(n>>>8&255)+(255&n),t.put(n,13),e+=2}if(e<r.length)throw"illegal char at "+(e+1)}};return i},D=function(){var t=[],r={writeByte:function(r){t.push(255&r)},writeShort:function(t){r.writeByte(t),r.writeByte(t>>>8)},writeBytes:function(t,e,n){e=e||0,n=n||t.length;for(var o=0;o<n;o+=1)r.writeByte(t[o+e])},writeString:function(t){for(var e=0;e<t.length;e+=1)r.writeByte(t.charCodeAt(e))},toByteArray:function(){return t},toString:function(){var r="";r+="[";for(var e=0;e<t.length;e+=1)e>0&&(r+=","),r+=t[e];return r+="]"}};return r},S=function(t){var r=t,e=0,n=0,o=0,i={read:function(){for(;o<8;){if(e>=r.length){if(0==o)return-1;throw"unexpected end of file./"+o}var t=r.charAt(e);if(e+=1,"="==t)return o=0,-1;t.match(/^\s$/)||(n=n<<6|a(t.charCodeAt(0)),o+=6)}var i=n>>>o-8&255;return o-=8,i}},a=function(t){if(65<=t&&t<=90)return t-65;if(97<=t&&t<=122)return t-97+26;if(48<=t&&t<=57)return t-48+52;if(43==t)return 62;if(47==t)return 63;throw"c:"+t};return i},I=function(t,r,e){for(var n=function(t,r){var e=t,n=r,o=new Array(t*r),i={setPixel:function(t,r,n){o[r*e+t]=n},write:function(t){t.writeString("GIF87a"),t.writeShort(e),t.writeShort(n),t.writeByte(128),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(255),t.writeByte(255),t.writeByte(255),t.writeString(","),t.writeShort(0),t.writeShort(0),t.writeShort(e),t.writeShort(n),t.writeByte(0);var r=a(2);t.writeByte(2);for(var o=0;r.length-o>255;)t.writeByte(255),t.writeBytes(r,o,255),o+=255;t.writeByte(r.length-o),t.writeBytes(r,o,r.length-o),t.writeByte(0),t.writeString(";")}},a=function(t){for(var r=1<<t,e=1+(1<<t),n=t+1,i=u(),a=0;a<r;a+=1)i.add(String.fromCharCode(a));i.add(String.fromCharCode(r)),i.add(String.fromCharCode(e));var f,c,g,l=D(),h=(f=l,c=0,g=0,{write:function(t,r){if(t>>>r!=0)throw"length over";for(;c+r>=8;)f.writeByte(255&(t<<c|g)),r-=8-c,t>>>=8-c,g=0,c=0;g|=t<<c,c+=r},flush:function(){c>0&&f.writeByte(g)}});h.write(r,n);var s=0,v=String.fromCharCode(o[s]);for(s+=1;s<o.length;){var d=String.fromCharCode(o[s]);s+=1,i.contains(v+d)?v+=d:(h.write(i.indexOf(v),n),i.size()<4095&&(i.size()==1<<n&&(n+=1),i.add(v+d)),v=d)}return h.write(i.indexOf(v),n),h.write(e,n),h.flush(),l.toByteArray()},u=function(){var t={},r=0,e={add:function(n){if(e.contains(n))throw"dup key:"+n;t[n]=r,r+=1},size:function(){return r},indexOf:function(r){return t[r]},contains:function(r){return void 0!==t[r]}};return e};return i}(t,r),o=0;o<r;o+=1)for(var i=0;i<t;i+=1)n.setPixel(i,o,e(i,o));var a=D();n.write(a);for(var u=function(){var t=0,r=0,e=0,n="",o={},i=function(t){n+=String.fromCharCode(a(63&t))},a=function(t){if(t<0);else{if(t<26)return 65+t;if(t<52)return t-26+97;if(t<62)return t-52+48;if(62==t)return 43;if(63==t)return 47}throw"n:"+t};return o.writeByte=function(n){for(t=t<<8|255&n,r+=8,e+=1;r>=6;)i(t>>>r-6),r-=6},o.flush=function(){if(r>0&&(i(t<<6-r),t=0,r=0),e%3!=0)for(var o=3-e%3,a=0;a<o;a+=1)n+="="},o.toString=function(){return n},o}(),f=a.toByteArray(),c=0;c<f.length;c+=1)u.writeByte(f[c]);return u.flush(),"data:image/gif;base64,"+u};return t}();qrcode.stringToBytesFuncs["UTF-8"]=function(t){return function(t){for(var r=[],e=0;e<t.length;e++){var n=t.charCodeAt(e);n<128?r.push(n):n<2048?r.push(192|n>>6,128|63&n):n<55296||n>=57344?r.push(224|n>>12,128|n>>6&63,128|63&n):(e++,n=65536+((1023&n)<<10|1023&t.charCodeAt(e)),r.push(240|n>>18,128|n>>12&63,128|n>>6&63,128|63&n))}return r}(t)},function(t){"function"==typeof define&&define.amd?define([],t):"object"==typeof exports&&(module.exports=t())}(function(){return qrcode});
+</script>
+<script>
+/* ---------- Tartalom ---------- */
+var COMMON = [
+  {id:'pb', name:'Politikai Bizottság (PB)', def:'Az MSZMP szűkebb döntéshozó testülete; a valódi politikai döntések itt születtek, a Központi Bizottság ülései előtt.', match:['politikai bizottság','=pb']},
+  {id:'kb', name:'Központi Bizottság (KB)', def:'Két kongresszus között a párt legfőbb döntéshozó szerve; tagjai választották a Politikai Bizottságot és a főtitkárt.', match:['központi bizottság','=kb']}
+];
+
+var TABLES = [
+{
+  id:'t1', no:1, theme:'Gazdaság', short:'Gazdaság',
+  title:'Eltitkolt adósság, „csődtömeg” és a halogatás csapdája',
+  lead:'Mit kezdjen a pártvezetés azzal, hogy az ország évek óta többet költ, mint amennyit megtermel – és ki tudhatja meg a valódi számokat?',
+  sources:[
+    {tag:'1/A', title:'Kádár János a gazdálkodási jelentésről', ctx:'MSZMP PB-ülés · 1980-as évek közepe · zárt vita a gazdálkodási jelentésről',
+     lines:[
+      ['Kádár János',['Elvtársak, a gazdálkodási jelentést mindenki megkapta, és mindenki látja belőle a legfontosabb számot.','!A nyugati adósságunk öt év alatt mintegy 400 millió dollárral nőtt.','Ezt nem lehet szépíteni, és nem lehet azt mondani, hogy egyszerűen ránk zúdult kívülről.']],
+      ['Kádár János',['Azt javaslom, hogy ezeket a számokat a legszigorúbban kezeljük.','!Az anyag kerüljön a titkos irattárba, és ahol nem feltétlenül szükséges, a példányokat meg kell semmisíteni.','!Senki ne [[agitáljon vagy házaljon]] ezekkel a számokkal, sem a párton belül, sem azon kívül.']],
+      ['Kádár János',['Ha ezek a számok kikerülnek, mindenki a maga módján fogja magyarázni őket.','És akkor már nem mi mondjuk meg, mit jelentenek.']]
+     ]},
+    {tag:'1/B', title:'Kádár János a tervgazdálkodásról és az életszínvonalról', ctx:'MSZMP KB-ülés · 1980-as évek második fele · gazdaságpolitikai vita',
+     lines:[
+      ['Kádár János',['A szocialista tervgazdálkodásról nem mondunk le, ez a rendszerünk alapja.','A piaci törvényeket azonban rendeletből nem lehet felfüggeszteni, akármennyire szeretnénk.']],
+      ['Kádár János',['Mi a lakosságnak azt ígértük, hogy az életszínvonal évről évre emelkedik.','Ezt az ígéretet sokáig tartani is akartuk, mert ezen nyugodott az emberek bizalma.']],
+      ['Kádár János',['!Ki kell mondanunk magunk között: évekig [[többet osztottunk el, mint amennyit megtermeltünk]].','A különbséget hitelből fedeztük, és ennek most benyújtják a számláját.']]
+     ]},
+    {tag:'1/C', title:'Grósz Károly és Nyers Rezső a „nagy csődtömegről”', ctx:'MSZMP PB-ülés · 1988 · az adósságterhek kezeléséről',
+     lines:[
+      ['Grósz Károly',['Itt egy [[nagy csődtömeg]] áll előttünk, és ezt nem lehet egyik napról a másikra eltüntetni.']],
+      ['Nyers Rezső',['Éppen ezért kell nyíltan beszélni róla.','Ha az emberek nem értik, miért kell áldozatot hozniuk, nem fogják vállalni.']],
+      ['Grósz Károly',['Ha mindent egyszerre kimondunk, azt a társadalom ma nem tudja feldolgozni.','Megmondjuk, és utána mit kezdünk a következményeivel?','![[Hát nem tudunk.]]']],
+      ['Nyers Rezső',['![[De tudnunk kell.]]','!Az adósságterheket nem lehet tovább görgetni: minden évnyi halogatás drágább, mint az előző.']],
+      ['Grósz Károly',['Akkor legalább azt döntsük el, miből fizetjük az adósságszolgálatot, és mit viszünk a Minisztertanács elé.']],
+      ['Nyers Rezső',['Az átütemezést és a reformot együtt kell kezelni, különben csak új hitelt veszünk fel a régi kamataira.']]
+     ]}
+  ],
+  actors:[
+    {id:'kadar', name:'Kádár János', def:'Az MSZMP első titkára, majd főtitkára 1956-tól 1988 májusáig. A pártértekezleten leváltották, pártelnök lett; 1989 júliusában halt meg.', match:['kádár']},
+    {id:'grosz', name:'Grósz Károly', def:'1987–1988-ban miniszterelnök (a Minisztertanács elnöke), 1988 májusától 1989 októberéig az MSZMP főtitkára.', match:['grósz']},
+    {id:'nyers', name:'Nyers Rezső', def:'Az 1968-as új gazdasági mechanizmus egyik kidolgozója; 1988-tól ismét a pártvezetés tagja, 1989-ben az MSZMP elnöke. A reformszárny gazdasági tekintélye.', match:['nyers']}
+  ],
+  concepts:[
+    {id:'mt', name:'Minisztertanács', def:'A kormány hivatalos neve a szocialista Magyarországon. A gazdasági döntéseket formálisan ez hajtotta végre, a politikai irányítás azonban a pártnál volt.', match:['minisztertanács','kormány']},
+    {id:'peresztrojka', name:'peresztrojka', def:'„Átépítés”: Mihail Gorbacsov 1985 után meghirdetett szovjet reformpolitikája a gazdaság és az irányítás megújítására. A magyar reformerek is hivatkoztak rá.', match:['peresztrojk','gorbacsov']}
+  ],
+  quiz:{
+    q:'Mit mutat a három forrásrészlet a pártvezetés gazdasági dilemmájáról?',
+    options:[
+      {t:'Semmilyen komoly gazdasági gond nem volt; a vita csak a jelentés formájáról és a nyelvezetéről szólt.', why:'A források konkrét adósságnövekedésről (400 millió dollár öt év alatt), „csődtömegről” és arról szólnak, hogy többet osztottak el, mint amennyit megtermeltek. Valódi, súlyos gondról van szó.'},
+      {t:'A pártvezetés a külső eladósodás és a túlköltekezés miatt egyszerre tart a lakossági és politikai megrázkódtatástól, és attól, hogy az elhallgatás és a halogatás tovább rontja a helyzetet és a hitelességet.', ok:true, why:'Ez a kettős szorítás minden részletben megjelenik: Kádár elzárná a számokat, de kimondja a túlköltekezést; Grósz fél a következményektől („Hát nem tudunk.”), Nyers szerint a halogatás csak drágít („De tudnunk kell.”).'},
+      {t:'Az adósság problémáját csak a külföldi sajtó találta ki, ezért a vezetésnek nem kellett vele foglalkoznia.', why:'A számokról maga a pártvezetés tárgyal zárt ülésen, és éppen azt akarja elkerülni, hogy kikerüljenek. A gond belső adatokon alapult, nem a külföldi sajtó találmánya volt.'},
+      {t:'A vezetés egyhangúlag a teljes nyilvánosság mellett döntött, és azonnal közzétette az adósság pontos számait.', why:'Épp ellenkezőleg: Kádár titkos irattárat és megsemmisítést javasol, Grósz pedig a nyílt kimondás kockázatától tart. A nyilvánosság kérdése vita tárgya volt, nem egyhangú döntés.'}
+    ]
+  },
+  kw:['adósság','eladósod','hitel','elhallgat','eltitk','titk','halogat','bizalm','hiteless','mozgást','elrejt','túlköltekez','életszínvonal','csőd','megtermel','rejteget'],
+  key:{
+    clash:'Az adósság elzárása / elhallgatása (titkos irattár, „ne agitáljon vagy házaljon”) szemben azzal, hogy évekig „többet osztottunk el, mint amennyit megtermeltünk”; vagy Grósz és Nyers összecsapása: „Hát nem tudunk.” – „De tudnunk kell.”',
+    reason:'A tartós eladósodás és a valós helyzet elrejtése szűkítette a gazdasági és politikai mozgásteret, és aláásta a vezetés hitelességét, a lakosság bizalmát.',
+    cards:'Legalább két kártyaelem összekapcsolása, pl. Kádár János (aki az életszínvonal-ígéretre építette a rendszert) és a Minisztertanács (amely a terheket végrehajtaná), vagy Nyers Rezső és a peresztrojka (reform mint kiút az adósságcsapdából).',
+    cardsModel:'Nyers Rezső a peresztrojkához hasonló, mélyebb reformot sürget: szerint az adósságot csak akkor lehet kezelni, ha nyíltan kimondják, és a gazdaság szerkezetén is változtatnak – Grósz viszont a következményektől tart.',
+    tiktok:{hook:'Mi történik, ha egy ország évekig hitelből él – és senkinek sem szól?', quote:'„Hát nem tudunk.” – „De tudnunk kell.”', who:'Grósz Károly és Nyers Rezső, PB-ülés, 1988', explain:'A vezetés tudta, hogy baj van, de félt kimondani – a halogatás alatt fogyott a pénz és a bizalom is.', close:'Te kimondtad volna az igazat, ha tudod, hogy felháborodást okoz?'}
+  }
+},
+{
+  id:'t2', no:2, theme:'Sajtó és nyilvánosság', short:'Sajtó',
+  title:'„Tűszúrások”, belső tájékoztatás és a nyilvánosság tágulása',
+  lead:'Ki dönti el, mi kerülhet képernyőre és újságba – és mi történik, ha a vezetés már nem tudja előre eldönteni?',
+  sources:[
+    {tag:'2/A', title:'Grósz, Berecz és Sarlós a televízió „felfogásáról”', ctx:'MSZMP PB-ülés · 1987–1988 · a televíziós műsorokról',
+     lines:[
+      ['Grósz Károly',['!Nem egy-egy adással van baj, hanem a [[felfogással]].','A Hét is, a szórakoztató műsorok is hétről hétre megengednek maguknak egy-egy [[tűszúrást]].']],
+      ['Berecz János',['A tűszúrásokat nem lehet egyenként letiltani.','Ha minden poénra a Politikai Bizottság reagál, azzal csak felnagyítjuk őket.']],
+      ['Sarlós István',['!A gond ott kezdődik, amikor olyan kényes ügyeket, amelyeket előbb nekünk kellene megtárgyalnunk, már a nyilvánosság előtt vitatnak meg.']],
+      ['Grósz Károly',['Akkor a televízió vezetőivel kell beszélni a felfogásról.','Nem cenzúráról van szó, hanem felelősségről.']],
+      ['Berecz János',['!Tudomásul kell venni, hogy a nézők ma már mást várnak: ha mi hallgatunk, valaki más mondja el.']]
+     ]},
+    {tag:'2/B', title:'Pozsgay Imre és Kádár János a lakiteleki nyilatkozatról', ctx:'MSZMP PB-ülés · 1987 ősze · a lakiteleki találkozó és a sajtóinterjú ügye',
+     lines:[
+      ['Kádár János',['Pozsgay elvtárs, nem az a kérdés, mi hangzott el Lakiteleken.','!Az a kérdés, hogy a nyilatkozat és az interjú úgy jelent meg, hogy a vezetés előzetesen nem tudott róla.']],
+      ['Pozsgay Imre',['!Azért vállaltam az interjút, hogy elkerüljük a nemzetközi sajtókonferenciát.','Ha nem mi mondjuk el itthon, a külföldi sajtó mondja el helyettünk.']],
+      ['Kádár János',['Ez lehet érv, de nem [[pártszerű eljárás]].','!Nem lehet utólag egyeztetni arról, amit valaki már a nyilvánosság elé vitt.']],
+      ['Pozsgay Imre',['Az előzetes egyeztetésre nem volt idő, és a tartalomban nincs semmi, ami ellentétes a párt politikájával.']],
+      ['Kádár János',['A tartalomról vitatkozhatunk.','Az eljárásról nem.']]
+     ]},
+    {tag:'2/C', title:'Kovács Jenő, Grósz Károly és Szűrös Mátyás a tájékoztatás rendjéről', ctx:'MSZMP KB-ülés · 1989 · belső és parlamenti tájékoztatás',
+     lines:[
+      ['Kovács Jenő',['A tájékoztatásunk ma is lépcsőzetes: előbb a PB, aztán a KB, aztán a megyei első titkárok, végül a taglétszám.','!Mire a hír a pártalapszervezethez ér, addigra már mindenki a nyugati rádiókból hallotta.']],
+      ['Grósz Károly',['Ez a rend egy zárt párthoz illett.','!Ma a döntések egy részét az Országgyűlés elé kell vinni, és ott nem csak párttagok ülnek.']],
+      ['Szűrös Mátyás',['!Azt kérem, hogy a parlamenti tájékoztatás [[minden országgyűlési képviselőhöz]] egyszerre jusson el, ne csak a párttag képviselőkhöz.']],
+      ['Kovács Jenő',['Ha a párton kívüli képviselő később tud meg valamit, mint a párttag, azt joggal érzi megkülönböztetésnek.']],
+      ['Szűrös Mátyás',['A képviselő a választóinak felel, nem a pártcsoportnak, és ezt a tájékoztatásban is tükrözni kell.']]
+     ]}
+  ],
+  actors:[
+    {id:'grosz2', name:'Grósz Károly', def:'Miniszterelnök (1987–1988), majd főtitkár (1988–1989). A sajtó „felfogását” bírálta, de a parlament szerepének növekedését is elfogadta.', match:['grósz']},
+    {id:'sarlos', name:'Sarlós István', def:'Az Országgyűlés elnöke (1984–1988), a pártvezetés tagja. A forrásban a zárt testületi döntés elsőbbségét védi a nyilvános vitával szemben.', match:['sarlós']},
+    {id:'szuros', name:'Szűrös Mátyás', def:'A KB külügyi titkára, 1989 márciusától az Országgyűlés elnöke; 1989. október 23-án ideiglenes köztársasági elnökként kikiáltotta a Magyar Köztársaságot.', match:['szűrös']},
+    {id:'pozsgay2', name:'Pozsgay Imre', src:true, def:'A Hazafias Népfront főtitkára, majd államminiszter; a reformszárny legismertebb alakja. Részt vett az 1987-es lakiteleki találkozón.', match:['pozsgay']},
+    {id:'kadar2', name:'Kádár János', src:true, def:'Az MSZMP vezetője 1956–1988 között. A forrásban a „pártszerű”, előzetes egyeztetésre épülő eljárást kéri számon.', match:['kádár']},
+    {id:'berecz', name:'Berecz János', src:true, def:'A KB ideológiai titkára (1985–1989), korábban a Népszabadság főszerkesztője; a sajtóirányítás egyik felelőse.', match:['berecz']},
+    {id:'kovacs', name:'Kovács Jenő', src:true, def:'MSZMP-funkcionárius; a forrásban a pártszervezetek lépcsőzetes, belső tájékoztatásának gyakorlatáról beszél.', match:['kovács']}
+  ],
+  concepts:[
+    {id:'glasznoszty', name:'glasznoszty', def:'„Nyilvánosság, nyíltság”: Gorbacsov politikájának eleme, amely engedte a hibák és a múlt nyilvános megvitatását. Magyarországon a sajtó mozgásterének tágulását jelentette.', match:['glasznoszty']},
+    {id:'nepszabadsag', name:'Népszabadság', def:'Az MSZMP központi napilapja, a párt hivatalos álláspontjának fő közvetítője. Ami itt megjelent, az „hivatalosnak” számított.', match:['népszabadság']}
+  ],
+  quiz:{
+    q:'Mi a három forrásrészlet közös tanulsága a nyilvánosságról?',
+    options:[
+      {t:'A pártvezetés teljes és korlátlan nyilvánosságot akart, ezért örömmel fogadta a kritikus tévéműsorokat és az előzetes egyeztetés nélküli interjúkat.', why:'A források éppen a kontroll elvesztése miatti aggodalmat mutatják: „tűszúrások”, „nem pártszerű eljárás”, kényes ügyek a nyilvánosság előtt. A vezetés nem akart korlátlan nyilvánosságot.'},
+      {t:'A vita csupán egyetlen tévéműsor ízléséről szólt, a politikai rendszer működésére nem volt hatással.', why:'Grósz maga mondja, hogy „nem egy-egy adással van baj”. A vita a lakiteleki interjúra és a parlamenti tájékoztatásra is kiterjed, tehát a rendszer egészét érinti.'},
+      {t:'A nyilvánosság tágulása már nem csupán egy-egy műsor vitája: kikezdi az információs kontrollt, a belső pártfegyelmet és a zárt döntéshozatal megszokott rendjét.', ok:true, why:'A három részlet három szinten mutatja ugyanazt: a televízió (kontroll), Pozsgay interjúja (pártfegyelem, előzetes egyeztetés) és a parlamenti képviselők egyenlő tájékoztatása (a zárt, hierarchikus döntéshozatal vége).'},
+      {t:'A sajtó a nyolcvanas évek végén is változatlanul, a régi rend szerint működött, ezért a vezetésnek nem volt mitől tartania.', why:'Ha minden változatlan lett volna, nem kellett volna a PB-nek „tűszúrásokról” és pártszerűtlen interjúkról vitatkoznia. A források a változás jelei.'}
+    ]
+  },
+  kw:['nyilvános','információ','tájékoztat','monopól','kontroll','ellenőrz','pártfegyelm','fegyelm','cenzúr','sajtó','irányít','zárt','glasznoszty','képviselő','egyeztet','pártszerű','hír'],
+  key:{
+    clash:'A „tűszúrások” / a „felfogás” bírálata; vagy a pártszerű eljárás (előzetes egyeztetés) szemben Pozsgay nyilvános lépésével; vagy az, hogy a parlamenti tájékoztatás minden képviselőhöz egyformán jusson el, ne csak a párttagokhoz.',
+    reason:'Az információ feletti monopólium gyengülése csökkentette a párt irányító erejét: már nem a vezetés döntötte el, mi, mikor és kinek jut tudomására.',
+    cards:'Két kártyaelem összekapcsolása, pl. a glasznoszty vagy a Népszabadság és Grósz / Sarlós / Szűrös (vagy a forrás más szereplője).',
+    cardsModel:'Szűrös Mátyás kérése a glasznoszty magyar változata: a tájékoztatás már nem a párt belső lépcsőin halad, hanem minden képviselőhöz egyszerre jut el – így a párt elveszíti az információs előnyét.',
+    tiktok:{hook:'Egy tévéműsor „tűszúrása” miatt ült össze a pártvezetés?', quote:'„Nem egy-egy adással van baj, hanem a felfogással.”', who:'Grósz Károly, PB-ülés, 1987–1988', explain:'A párt már nem tudta előre eldönteni, mi kerül nyilvánosság elé – az információs monopólium repedezett.', close:'Szerinted ki dönti el ma, mi kerül a nyilvánosság elé?'}
+  }
+},
+{
+  id:'t3', no:3, theme:'Politika és hatalom', short:'Politika',
+  title:'„Monolitikus” egységtől a tárgyalások „szakítópróbájáig”',
+  lead:'Meddig lehet engedni úgy, hogy a hatalom ne csússzon ki a kézből – és mi történik, amikor már a tárgyalóasztalnál dől el?',
+  sources:[
+    {tag:'3/A', title:'Hámori Csaba és Aczél György a bizalom gyengüléséről', ctx:'MSZMP PB-ülés · 1987 · az ifjúság és az értelmiség hangulatáról',
+     lines:[
+      ['Hámori Csaba',['A fiatalok között azt tapasztaljuk, hogy amikor [[monolitikus véleményeket]] sugárzunk, egyre kevesebben hisznek nekünk.','Látják, hogy a valóság nem ilyen egyszerű.']],
+      ['Hámori Csaba',['Az értelmiség bizalma is gyengül.','Nem azért, mert ellenségeink, hanem mert nem látják, hol vitatkozhatnának velünk.']],
+      ['Aczél György',['Véleménykülönbségek mindig voltak közöttünk is.','Az újdonság az, hogy ma már nem tudjuk a szobán belül tartani őket.']],
+      ['Aczél György',['A kérdés, amit fel kell tennünk, nagyon egyszerű és nagyon nehéz:','![[Meddig lehet ma változtatni anélkül, hogy veszélybe kerül a hatalom.]]']]
+     ]},
+    {tag:'3/B', title:'Berecz János és Grósz Károly a pártértekezlet után', ctx:'MSZMP PB-ülés · 1988, a májusi pártértekezlet után · a „gyeplő” vitája',
+     lines:[
+      ['Berecz János',['A pártértekezlet után feloldottuk azt a [[merev kötöttséget]], amely évekig minden vitát lezárt, mielőtt elkezdődött volna.']],
+      ['Grósz Károly',['!Voltak tételeink, amelyek egykor kapaszkodók voltak, mára [[bilinccsé váltak]].','Ezeket nem védhetjük tovább csak azért, mert megszoktuk őket.']],
+      ['Berecz János',['!De vannak, akik azt mondják: [[odadobtuk a gyeplőt]].','Az alternatív csoportok hétről hétre szerveződnek, mi pedig csak reagálunk.']],
+      ['Grósz Károly',['Ha keményebben lépünk fel ellenük, azzal csak a tekintélyüket növeljük.','!Ha semmit nem teszünk, ők szabják meg a napirendet.']],
+      ['Berecz János',['Akkor el kell döntenünk, hol a határ, és azt a határt mindenkinek tudnia kell.']]
+     ]},
+    {tag:'3/C', title:'Pozsgay Imre és Fejti György a háromoldalú tárgyalásokról', ctx:'MSZMP PB-ülés · 1989 · Alkotmány, vezető szerep, Ellenzéki Kerekasztal',
+     lines:[
+      ['Fejti György',['A háromoldalú tárgyalásokon az a feladatunk, hogy az átmenet alkotmányos keretek között, a mi feltételeink mellett menjen végbe.']],
+      ['Pozsgay Imre',['!Az Alkotmányból a párt vezető szerepét így vagy úgy ki kell venni.','Ezt már nem megtartani lehet, csak vállalni, hogy mi kezdeményezzük.']],
+      ['Fejti György',['!Az Ellenzéki Kerekasztal számára ez [[szakítópróba]]: ha a kényes kérdésekben nem jutnak egyezségre, a saját egységük is megbomolhat.']],
+      ['Pozsgay Imre',['És számunkra is szakítópróba.','!Ha a tárgyalóasztalnál nem teszünk elfogadható ajánlatot, a döntést nem mi hozzuk meg, hanem a választók.']],
+      ['Fejti György',['Akkor tudnunk kell, mi az a minimum, amiből nem engedünk.']]
+     ]}
+  ],
+  actors:[
+    {id:'hamori', name:'Hámori Csaba', def:'A KISZ (Kommunista Ifjúsági Szövetség) első titkára 1984–1988 között; a fiatalok hangulatáról tájékoztatta a pártvezetést.', match:['hámori']},
+    {id:'aczel', name:'Aczél György', def:'Évtizedekig a kultúrpolitika irányítója, Kádár egyik legközelebbi munkatársa; nevéhez a „tiltott – tűrt – támogatott” gyakorlat kötődik.', match:['aczél']},
+    {id:'pozsgay3', name:'Pozsgay Imre', def:'Államminiszter (1988–1989), a háromoldalú tárgyalásokon az MSZMP egyik vezető tárgyalója; 1989 januárjában népfelkelésnek nevezte 1956-ot.', match:['pozsgay']},
+    {id:'fejti', name:'Fejti György', def:'Az MSZMP KB titkára (1988–1989); a háromoldalú tárgyalásokon a párt küldöttségének egyik vezetője.', match:['fejti']},
+    {id:'berecz3', name:'Berecz János', src:true, def:'A KB ideológiai titkára (1985–1989); a forrásban a keményebb fellépés hívei és a nyitás hívei közötti vitát közvetíti.', match:['berecz']},
+    {id:'grosz3', name:'Grósz Károly', src:true, def:'Az MSZMP főtitkára 1988 májusától; a forrásban a „bilinccsé vált” tételek feloldása mellett érvel.', match:['grósz']}
+  ],
+  concepts:[
+    {id:'egypart', name:'egypártrendszer', def:'Olyan berendezkedés, amelyben egyetlen párt birtokolja a hatalmat, más pártok nem működhetnek. Az MSZMP „vezető szerepét” 1972-től az Alkotmány is rögzítette.', match:['egypárt','vezető szerep']},
+    {id:'eka', name:'Ellenzéki Kerekasztal', def:'1989. március 22-én alakult egyeztető fórum: az ellenzéki szervezetek (pl. MDF, SZDSZ, Fidesz, FKgP) közös tárgyalócsoportja a háromoldalú tárgyalásokon.', match:['kerekasztal','=eka']},
+    {id:'alt', name:'alternatív csoportok', def:'A nyolcvanas évek második felében a hivatalos kereteken kívül szerveződő független körök, egyesületek és mozgalmak (pl. MDF 1987, Fidesz és SZDSZ 1988).', match:['alternatív','ellenzéki szervez']}
+  ],
+  quiz:{
+    q:'Milyen fejlődési ívet rajzol ki a három forrásrészlet 1987 és 1989 között?',
+    options:[
+      {t:'Az egypártrendszer mindvégig változatlan maradt; tárgyalásokra nem került sor, mert az MSZMP egyedül döntött mindenről.', why:'1989-ben Pozsgay és Fejti már a háromoldalú tárgyalásokról, az Alkotmány módosításáról és az Ellenzéki Kerekasztallal folytatott alkuról beszél – az egypártrendszer tehát megrendült, és volt tárgyalás.'},
+      {t:'A pártvezetés belső mozgástér-keresésétől és hatalomféltésétől (1987–1988) eljutunk odáig (1989), hogy az egypárti monopólium meggyengül, és a hatalmi kérdések már tárgyalásos keretek között, az Ellenzéki Kerekasztallal szemben dőlnek el.', ok:true, why:'Az ív jól követhető: Aczél kérdése a változtatás határáról (1987), a „bilinccsé vált” tételek és az „odadobtuk a gyeplőt” vitája (1988), végül a vezető szerep feladása és a „szakítópróba” a tárgyalóasztalnál (1989).'},
+      {t:'A változást kizárólag a Szovjetunió parancsolta meg; a magyar pártvezetésben nem voltak viták és eltérő vélemények.', why:'A források éppen a belső vitákat mutatják: Hámori és Aczél a bizalomvesztésről, Berecz és Grósz a „gyeplőről”, Pozsgay és Fejti a tárgyalási minimumról vitatkozik.'},
+      {t:'Az alternatív csoportokat 1988-ban sikeresen felszámolták, ezért 1989-re megszűnt minden ellenzéki szerveződés.', why:'Grósz szerint a keményebb fellépés csak a csoportok tekintélyét növelte volna; 1989-re pedig az ellenzéki szervezetek az Ellenzéki Kerekasztalban egyenrangú tárgyalófélként ültek le.'}
+    ]
+  },
+  kw:['hatalom','hatalm','egypárt','monopól','ellenzék','kerekasztal','tárgyal','bizalm','alternatív','vezető szerep','stabil','egység','egyeduralm','monolit','gyeplő','bilincs','alkotmány','szakítóprób'],
+  key:{
+    clash:'A hatalom veszélyeztetésének határa (Aczél: „Meddig lehet ma változtatni…”); a „bilinccsé vált” tételek / „odadobtuk a gyeplőt”; vagy az Ellenzéki Kerekasztal „szakítópróbája” és a vezető szerep kivétele az Alkotmányból.',
+    reason:'A belső bizonytalanság (meddig lehet engedni?) és a külső politikai szerveződés (alternatív csoportok, Ellenzéki Kerekasztal) együtt bontotta fel az egyeduralmi stabilitást.',
+    cards:'Két kártyaelem összekapcsolása, pl. Ellenzéki Kerekasztal / egypártrendszer / alternatív csoportok és Pozsgay / Fejti / Aczél / Hámori.',
+    cardsModel:'Pozsgay Imre belátja, hogy az egypártrendszer alkotmányos alapját, a vezető szerepet fel kell adni, mert az Ellenzéki Kerekasztal már tárgyalófélként ül vele szemben – a hatalomról alkudni kell.',
+    tiktok:{hook:'Hogyan lehet változtatni úgy, hogy közben ne veszítsd el a hatalmat?', quote:'„Meddig lehet ma változtatni anélkül, hogy veszélybe kerül a hatalom.”', who:'Aczél György, PB-ülés, 1987', explain:'1987-ben ez még belső kérdés volt – 1989-re a hatalomról már az Ellenzéki Kerekasztallal tárgyaltak.', close:'Lehet-e megreformálni egy rendszert úgy, hogy ne bomoljon fel?'}
+  }
+}
+];
+
+/* ---------- Működés ---------- */
+var PUBLIC_URL = '';
+var STORE = 'wc-kadar-1986-89-v1';
+var state = {view:'one', table:'t1', teacher:false, f:{}, hl:{}, cards:{}, quiz:{}, qrUrl:''};
+try { var saved = JSON.parse(localStorage.getItem(STORE) || 'null'); if (saved) for (var k in saved) state[k] = saved[k]; } catch(e) {}
+function save(){ try { localStorage.setItem(STORE, JSON.stringify(state)); } catch(e) {} }
+
+function $(s, r){ return (r||document).querySelector(s); }
+function $$(s, r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function vb(s){ return esc(s).replace(/\[\[(.+?)\]\]/g, '<span class="vb">$1</span>'); }
+function plain(s){ return s.replace(/^!/, '').replace(/\[\[|\]\]/g, ''); }
+function norm(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[„”"“'‘’»«…–—\-.,:;!?()]/g,' ').replace(/\s+/g,' ').trim(); }
+function words(s){ var n = norm(s); return n ? n.split(' ').length : 0; }
+function has(text, m){ var n = norm(text); if (m.charAt(0) === '=') return (' '+n+' ').indexOf(' '+norm(m.slice(1))+' ') > -1; return n.indexOf(norm(m)) > -1; }
+var LETTERS = ['A','B','C','D'];
+var byId = {}; TABLES.forEach(function(t){ byId[t.id] = t; });
+
+/* Mondatazonosítók */
+var SENT = {};
+TABLES.forEach(function(t){
+  t.sents = [];
+  t.sources.forEach(function(src, si){
+    src.lines.forEach(function(line, li){
+      line[1].forEach(function(raw, ri){
+        var id = t.id+'-'+si+'-'+li+'-'+ri;
+        var o = {id:id, t:t.id, src:src, speaker:line[0], raw:raw, text:plain(raw), key:raw.charAt(0)==='!'};
+        SENT[id] = o; t.sents.push(o);
+      });
+    });
+  });
+  t.allCards = COMMON.map(function(c){ return Object.assign({grp:'common'}, c); })
+    .concat(t.actors.map(function(c){ return Object.assign({grp:'actor'}, c); }))
+    .concat(t.concepts.map(function(c){ return Object.assign({grp:'concept'}, c); }));
+});
+
+function field(id, label, opts){
+  opts = opts || {};
+  var hint = opts.hint ? ' <span class="t">'+opts.hint+'</span>' : '';
+  var input = opts.line
+    ? '<input type="text" id="'+id+'" data-store="'+id+'" autocomplete="off"'+(opts.ph?' placeholder="'+esc(opts.ph)+'"':'')+'>'
+    : '<textarea id="'+id+'" data-store="'+id+'" rows="'+(opts.rows||3)+'"'+(opts.ph?' placeholder="'+esc(opts.ph)+'"':'')+'></textarea>';
+  return '<div class="field'+(opts.cls?' '+opts.cls:'')+'"><label for="'+id+'">'+label+hint+'</label>'+input+'<div class="pv'+(opts.line?' short':'')+'" data-pv="'+id+'"></div></div>';
+}
+
+function renderTable(t){
+  var h = '';
+  h += '<section class="table" id="'+t.id+'" data-table="'+t.id+'" aria-labelledby="'+t.id+'-h">';
+  h += '<header class="t-head"><div class="t-num">'+t.no+'<small>asztal</small></div><div><div class="t-theme">'+esc(t.theme)+'</div><h2 id="'+t.id+'-h">'+esc(t.title)+'</h2><p class="t-lead">'+esc(t.lead)+'</p></div></header>';
+  h += '<div class="t-body"><div class="col-src">';
+  h += '<div class="sec-title"><h3>Források</h3><span class="hint no-print">Kattints egy mondatra a kiemeléshez</span></div>';
+  h += '<p class="note">Szerkesztett, rövidített átiratok a „Szó szerint” kötet vitáiból. Az <span class="vb">aláhúzott, dőlt</span> kifejezések a kötet kulcsidézetei.</p>';
+  t.sources.forEach(function(src, si){
+    h += '<article class="source"><div class="src-head"><span class="src-tag">Forrás '+src.tag+'</span><h4>'+esc(src.title)+'</h4></div><p class="src-ctx">'+esc(src.ctx)+'</p><div class="dialogue">';
+    src.lines.forEach(function(line, li){
+      h += '<p class="line"><span class="speaker">'+esc(line[0])+'</span><span>';
+      line[1].forEach(function(raw, ri){
+        var id = t.id+'-'+si+'-'+li+'-'+ri;
+        h += '<span class="s'+(raw.charAt(0)==='!'?' key':'')+'" data-s="'+id+'" tabindex="0" role="button" aria-pressed="false">'+vb(raw.replace(/^!/,''))+'</span> ';
+      });
+      h += '</span></p>';
+    });
+    h += '</div></article>';
+  });
+  h += '<div class="hl-bar"><span>Kiemelt mondatok ezen az asztalon: <span class="count" data-hlcount="'+t.id+'">0</span></span><button class="btn small" type="button" data-act="hl-clear" data-t="'+t.id+'">Kiemelések törlése</button></div>';
+  h += '</div>';
+
+  /* Aside: kártya + kvíz */
+  h += '<div class="col-aside"><div class="card"><div class="card-head"><h3>Dekódoló kártya</h3><span>'+t.no+'. asztal</span></div><div class="card-body">';
+  var grpTitle = {common:'Közös keret – minden asztalon', actor:'Szereplők', concept:'Fogalmak'};
+  ['common','actor','concept'].forEach(function(g){
+    h += '<div class="grp">'+grpTitle[g]+'</div>';
+    t.allCards.filter(function(c){ return c.grp===g; }).forEach(function(c){
+      h += '<label class="term" data-card="'+t.id+':'+c.id+'"><input type="checkbox" data-cardbox="'+t.id+':'+c.id+'"><b>'+esc(c.name)+(c.src?'<span class="src-only">a forrásban</span>':'')+'</b><span class="def">'+esc(c.def)+'</span></label>';
+    });
+  });
+  h += '</div><p class="card-foot">Pipáld ki azokat az elemeket, amelyeket a 2. feladatban összekapcsolsz (legalább kettőt).</p></div>';
+
+  h += '<div class="quiz"><h3>Gyors ellenőrző kérdés</h3><p class="q">'+esc(t.quiz.q)+'</p>';
+  t.quiz.options.forEach(function(o, i){
+    h += '<label class="opt" data-opt="'+t.id+':'+i+'"><input type="radio" name="'+t.id+'-quiz" value="'+i+'"><span><span class="letter">'+LETTERS[i]+')</span> '+esc(o.t)+'</span></label>';
+  });
+  h += '<div class="fb" data-fb="'+t.id+'-quiz" hidden aria-live="polite"></div></div>';
+  h += '</div></div>';
+
+  /* Feladatlap */
+  h += '<div class="worksheet"><div class="ws-head"><h3>Feladatlap – '+t.no+'. asztal</h3><span class="hint" style="font-size:14px;color:var(--muted)">Minden feladat után: Ellenőrzés → azonnali javítás</span></div><div class="tasks">';
+
+  h += '<div class="task"><div class="task-h"><span class="n">1</span><div><h4>Az ütköző mondat</h4><p>Melyik mondatban ütközik a pártvezetés két szándéka vagy két álláspontja? Miért gyengítette ez a rendszert?</p></div></div>';
+  h += '<div class="chips" data-hlchips="'+t.id+'"></div>';
+  h += field(t.id+'-clash','Az ütköző mondat(ok)',{hint:'– szó szerint, idézőjelben', rows:3});
+  h += '<div class="row-btns" style="margin:-4px 0 12px"><button class="btn small" type="button" data-act="hl-insert" data-t="'+t.id+'">Kiemelt mondatok beillesztése</button></div>';
+  h += field(t.id+'-reason','Indoklás',{hint:'– 2–3 mondat: mi a tét, és mi lett a következménye?', rows:4});
+  h += '<div class="row-btns"><button class="btn primary small" type="button" data-act="check1" data-t="'+t.id+'">Ellenőrzés</button></div><div class="fb" data-fb="'+t.id+'-1" hidden aria-live="polite"></div></div>';
+
+  h += '<div class="task"><div class="task-h"><span class="n">2</span><div><h4>Kártyaelemek összekapcsolása</h4><p>Kapcsolj össze legalább két elemet a dekódoló kártyáról a forrással: ki, mit, miért?</p></div></div>';
+  h += '<div class="chips" data-cardchips="'+t.id+'"></div>';
+  h += field(t.id+'-link','Kapcsolat',{hint:'– nevezd meg mindkét elemet a szövegben', rows:5});
+  h += '<div class="row-btns"><button class="btn primary small" type="button" data-act="check2" data-t="'+t.id+'">Ellenőrzés</button></div><div class="fb" data-fb="'+t.id+'-2" hidden aria-live="polite"></div></div>';
+
+  h += '<div class="task wide"><div class="task-h"><span class="n">3</span><div><h4>35 másodperces TikTok-videóterv</h4><p>Horog → szó szerinti idézet → egymondatos magyarázat → zárókérdés. Egy perc beszéd kb. 140 szó, 35 másodperc tehát legfeljebb kb. 80 szó.</p></div></div>';
+  h += '<div class="tt"><div class="timeline" aria-hidden="true"><div>Horog</div><div>Szó szerinti idézet</div><div>Magyarázat</div><div>Zárókérdés</div></div><div class="ticks" aria-hidden="true"><span>0 mp</span><span>5 mp</span><span>20 mp</span><span>28–35 mp</span></div>';
+  h += '<div class="tt-grid">';
+  h += field(t.id+'-hook','Horog',{hint:'(0–5 mp) – meglepő kérdés vagy állítás', line:true, cls:'full'});
+  h += field(t.id+'-quote','Szó szerinti idézet',{hint:'(5–20 mp)', rows:2});
+  h += field(t.id+'-who','Ki mondta, hol, mikor?',{hint:'– forrásmegjelölés a képernyőn', rows:2});
+  h += '<div class="field full no-print"><label for="'+t.id+'-qsel">Idézet átvétele a kiemelt mondatokból</label><select id="'+t.id+'-qsel" data-qsel="'+t.id+'" style="width:100%;padding:7px;border:1px solid var(--rule-strong);background:var(--sheet);border-radius:3px"></select></div>';
+  h += field(t.id+'-explain','Magyarázat egy mondatban',{hint:'(20–28 mp)', rows:2});
+  h += field(t.id+'-close','Zárókérdés',{hint:'(28–35 mp) – kérdőjellel', rows:2});
+  h += field(t.id+'-visual','Képi ötlet, felirat, hang',{hint:'– nem kötelező', rows:2, cls:'full'});
+  h += '</div><div class="meter"><span>Becsült hossz:</span><span class="bar"><i data-meter="'+t.id+'"></i></span><b data-sec="'+t.id+'">0 mp</b><span>/ 35 mp</span></div>';
+  h += '<div class="row-btns"><button class="btn primary small" type="button" data-act="check3" data-t="'+t.id+'">Ellenőrzés</button><button class="btn small" type="button" data-act="tt-model" data-t="'+t.id+'">Mintaterv mutatása</button></div><div class="fb" data-fb="'+t.id+'-3" hidden aria-live="polite"></div></div></div>';
+  h += '</div></div>';
+
+  /* Tanári javítókulcs */
+  var correct = 0; t.quiz.options.forEach(function(o,i){ if (o.ok) correct = i; });
+  var wrong = t.quiz.options.filter(function(o){ return !o.ok; }).map(function(o){ return '<li>'+esc(o.t)+'</li>'; }).join('');
+  var keySents = t.sents.filter(function(s){ return s.key; }).map(function(s){ return '<li><span class="keyq">„'+esc(s.text)+'”</span> – '+esc(s.speaker)+'</li>'; }).join('');
+  h += '<section class="tkey" aria-label="Tanári javítókulcs"><h3>Tanári javítókulcs – '+t.no+'. asztal</h3><dl>';
+  h += '<dt>Gyors kérdés</dt><dd><b>'+LETTERS[correct]+')</b> '+esc(t.quiz.options[correct].t)+'<br><i>Helytelen:</i><ul style="margin:4px 0 0 18px;padding:0">'+wrong+'</ul></dd>';
+  h += '<dt>1. Ütköző mondat</dt><dd>'+esc(t.key.clash)+'<ul style="margin:6px 0 0 18px;padding:0">'+keySents+'</ul></dd>';
+  h += '<dt>1. Indoklás lényege</dt><dd>'+esc(t.key.reason)+'</dd>';
+  h += '<dt>2. Kártyaelemek</dt><dd>'+esc(t.key.cards)+'<br><i>Mintaválasz:</i> '+esc(t.key.cardsModel)+'</dd>';
+  h += '<dt>3. TikTok-terv</dt><dd>Horog + szó szerinti idézet forrásmegjelöléssel + zárókérdés, legfeljebb 35 mp. <i>Minta:</i> '+esc(t.key.tiktok.hook)+' / '+esc(t.key.tiktok.quote)+' ('+esc(t.key.tiktok.who)+') / '+esc(t.key.tiktok.explain)+' / '+esc(t.key.tiktok.close)+'</dd>';
+  h += '</dl></section>';
+  h += '</section>';
+  return h;
+}
+
+/* ---------- Megjelenítés ---------- */
+var tablesEl = $('#tables');
+tablesEl.innerHTML = TABLES.map(renderTable).join('');
+$('#tableSeg').innerHTML = TABLES.map(function(t){
+  return '<button type="button" data-table-btn="'+t.id+'"><span class="tn">'+t.no+'.</span><span class="lbl-long">Asztal: '+esc(t.theme)+'</span><span class="lbl-short">'+esc(t.short)+'</span></button>';
+}).join('');
+
+function applyView(){
+  TABLES.forEach(function(t){ $('#'+t.id).hidden = state.view==='one' && state.table!==t.id; });
+  $$('[data-table-btn]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-table-btn')===state.table)); });
+  $$('[data-view]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-view')===state.view)); });
+  document.body.classList.toggle('teacher', !!state.teacher);
+  $('#teacherToggle').checked = !!state.teacher;
+}
+
+function setPv(id){ var el = document.getElementById(id), pv = $('[data-pv="'+id+'"]'); if (el && pv) pv.textContent = el.value; }
+
+function restoreFields(){
+  $$('[data-store]').forEach(function(el){ var id = el.getAttribute('data-store'); if (state.f[id] != null) el.value = state.f[id]; setPv(id); });
+  $$('.s').forEach(function(s){ var on = !!state.hl[s.getAttribute('data-s')]; s.classList.toggle('hl', on); s.setAttribute('aria-pressed', String(on)); });
+  $$('[data-cardbox]').forEach(function(cb){ var p = cb.getAttribute('data-cardbox').split(':'); cb.checked = !!(state.cards[p[0]] && state.cards[p[0]][p[1]]); cb.closest('.term').classList.toggle('on', cb.checked); });
+  TABLES.forEach(function(t){
+    if (state.quiz[t.id] != null){ var r = $('input[name="'+t.id+'-quiz"][value="'+state.quiz[t.id]+'"]'); if (r){ r.checked = true; showQuiz(t.id); } }
+    refreshHl(t.id); refreshCards(t.id); refreshMeter(t.id);
+  });
+  if (!state.f['st-date']) { var d = new Date(); var v = d.getFullYear()+'. '+String(d.getMonth()+1).padStart(2,'0')+'. '+String(d.getDate()).padStart(2,'0')+'.'; $('#st-date').value = v; state.f['st-date'] = v; setPv('st-date'); }
+}
+
+function hlOf(tid){ return byId[tid].sents.filter(function(s){ return state.hl[s.id]; }); }
+function refreshHl(tid){
+  var list = hlOf(tid);
+  $('[data-hlcount="'+tid+'"]').textContent = list.length;
+  var chips = $('[data-hlchips="'+tid+'"]');
+  chips.innerHTML = list.length ? list.map(function(s){ return '<span class="chip q">„'+esc(s.text)+'” <button type="button" data-unhl="'+s.id+'" aria-label="Kiemelés törlése">×</button></span>'; }).join('') : '<span class="empty">Még nincs kiemelt mondat – kattints a forrásokban egy mondatra.</span>';
+  var sel = $('[data-qsel="'+tid+'"]');
+  sel.innerHTML = '<option value="">'+(list.length ? 'Válassz egy kiemelt mondatot…' : 'Előbb emelj ki mondatot a forrásokban')+'</option>' + list.map(function(s){ return '<option value="'+s.id+'">'+esc(s.speaker)+': '+esc(s.text.length>90 ? s.text.slice(0,88)+'…' : s.text)+'</option>'; }).join('');
+}
+function cardsOf(tid){ var c = state.cards[tid] || {}; return byId[tid].allCards.filter(function(x){ return c[x.id]; }); }
+function refreshCards(tid){
+  var list = cardsOf(tid);
+  $('[data-cardchips="'+tid+'"]').innerHTML = list.length ? list.map(function(c){ return '<span class="chip">'+esc(c.name)+' <button type="button" data-uncard="'+tid+':'+c.id+'" aria-label="Elem eltávolítása">×</button></span>'; }).join('') : '<span class="empty">Pipálj ki legalább két elemet a dekódoló kártyán.</span>';
+}
+function ttWords(tid){ return ['hook','quote','explain','close'].reduce(function(a,k){ return a + words(state.f[tid+'-'+k]); }, 0); }
+function secs(tid){ return Math.round(ttWords(tid) / 2.3); }
+function refreshMeter(tid){
+  var s = secs(tid), bar = $('[data-meter="'+tid+'"]');
+  bar.style.width = Math.min(100, s/35*100)+'%'; bar.classList.toggle('over', s>35);
+  $('[data-sec="'+tid+'"]').textContent = '≈ '+s+' mp';
+}
+
+/* ---------- Visszajelzések ---------- */
+function fb(id, cls, title, body){ var el = $('[data-fb="'+id+'"]'); el.className = 'fb '+cls; el.innerHTML = '<span class="fb-title">'+title+'</span>'+body; el.hidden = false; }
+function li(ok, txt){ return '<li class="'+(ok?'y':'n')+'">'+txt+'</li>'; }
+function verdict(n, total){ return n===total ? ['ok','Helyes válasz – megfelel a javítási kulcsnak'] : n===0 ? ['fix','Javítás – nézd meg a helyes megoldást'] : ['part','Részben helyes – javítsd a hiányzó pontot']; }
+
+function showQuiz(tid){
+  var t = byId[tid], pick = state.quiz[tid], correct = 0;
+  t.quiz.options.forEach(function(o,i){ if (o.ok) correct = i; });
+  $$('[data-opt^="'+tid+':"]').forEach(function(l){ var i = +l.getAttribute('data-opt').split(':')[1]; l.classList.toggle('is-correct', i===correct); l.classList.toggle('is-wrong', i===pick && i!==correct); });
+  var c = t.quiz.options[correct];
+  if (pick === correct) fb(tid+'-quiz','ok','Helyes válasz', '<p><b>'+LETTERS[correct]+')</b> '+esc(c.t)+'</p><p><b>Miért?</b> '+esc(c.why)+'</p>');
+  else { var p = t.quiz.options[pick];
+    fb(tid+'-quiz','fix','Javítás', '<p><b>A választásod ('+LETTERS[pick]+') nem helyes:</b> '+esc(p.why)+'</p><div class="key-box"><p><b>Helyes válasz: '+LETTERS[correct]+')</b> '+esc(c.t)+'</p><p><b>Miért?</b> '+esc(c.why)+'</p></div>'); }
+}
+
+function check1(tid){
+  var t = byId[tid], hls = hlOf(tid), clash = state.f[tid+'-clash'] || '', reason = state.f[tid+'-reason'] || '';
+  var nc = norm(clash);
+  var c1 = hls.length>0 || nc.length>=12;
+  var keyS = t.sents.filter(function(s){ return s.key; });
+  var hit = hls.some(function(s){ return s.key; }) || keyS.some(function(s){ var ns = norm(s.text); return (nc.length>=12 && ns.indexOf(nc.slice(0,30))>-1) || nc.indexOf(ns.slice(0,30))>-1; });
+  var kwHits = t.kw.filter(function(k){ return has(reason, k); });
+  var c3 = norm(reason).length>=60 && kwHits.length>=2;
+  var n = (c1?1:0)+(hit?1:0)+(c3?1:0), v = verdict(n,3);
+  var body = '<ul>'+li(c1,'Megjelölted vagy leírtad az ütköző mondatot.')+li(hit, hit ? 'A választott mondat a javítási kulcs egyik kulcsmondata.' : 'A választott mondat nem a legerősebb ütközés – lásd lent a kulcsmondatokat.')+li(c3, c3 ? 'Az indoklás kifejti a tétet és a következményt.' : 'Az indoklás legyen legalább 2–3 mondat, és nevezze meg a lényeget (pl. '+t.kw.slice(0,4).join(', ')+'…).')+'</ul>';
+  body += '<div class="key-box"><p><b>Helyes megoldás – ütköző mondat:</b> '+esc(t.key.clash)+'</p><p><b>Miért?</b> '+esc(t.key.reason)+'</p><p><b>Kulcsmondatok a forrásokban:</b></p><ul>'+keyS.map(function(s){ return '<li class="y"><q>'+esc(s.text)+'</q> – '+esc(s.speaker)+'</li>'; }).join('')+'</ul></div>';
+  fb(tid+'-1', v[0], v[1], body);
+}
+
+function check2(tid){
+  var t = byId[tid], sel = cardsOf(tid), link = state.f[tid+'-link'] || '';
+  var c1 = sel.length>=2;
+  var named = sel.filter(function(c){ return c.match.some(function(m){ return has(link, m); }); });
+  var c2 = named.length>=2;
+  var c3 = norm(link).length>=60;
+  var n = (c1?1:0)+(c2?1:0)+(c3?1:0), v = verdict(n,3);
+  var body = '<ul>'+li(c1, 'Legalább két kártyaelemet kijelöltél ('+sel.length+' db).')+li(c2, c2 ? 'A szövegben megnevezted őket: '+named.map(function(c){ return esc(c.name); }).join(', ')+'.' : 'A szövegben nevezd meg név szerint legalább két kijelölt elemet'+(named.length ? ' (eddig: '+named.map(function(c){ return esc(c.name); }).join(', ')+')' : '')+'.')+li(c3, c3 ? 'A kapcsolat kifejtett, nem csak felsorolás.' : 'Fejtsd ki a kapcsolatot legalább két mondatban: ki, mit, miért?')+'</ul>';
+  body += '<div class="key-box"><p><b>Helyes megoldás:</b> '+esc(t.key.cards)+'</p><p><b>Mintaválasz:</b> '+esc(t.key.cardsModel)+'</p></div>';
+  fb(tid+'-2', v[0], v[1], body);
+}
+
+function check3(tid){
+  var t = byId[tid], f = function(k){ return state.f[tid+'-'+k] || ''; };
+  var c1 = words(f('hook'))>=3;
+  var nq = norm(f('quote'));
+  var verb = nq.length>=12 && t.sents.some(function(s){ var ns = norm(s.text); return ns.indexOf(nq)>-1 || nq.indexOf(ns)>-1 || (nq.length>=25 && ns.indexOf(nq.slice(0,25))>-1); });
+  var speakers = t.sents.map(function(s){ return s.speaker.split(' ')[0]; });
+  var c3 = speakers.some(function(sp){ return has(f('who'), sp); });
+  var c4 = /\?\s*$/.test(f('close').trim()) && words(f('close'))>=3;
+  var s = secs(tid), c5 = s>=12 && s<=35;
+  var n = [c1,verb,c3,c4,c5].filter(Boolean).length, v = verdict(n,5);
+  var body = '<ul>'+li(c1,'Horog: van figyelemfelkeltő nyitás (legalább 3 szó).')+li(verb, verb ? 'Az idézet szó szerint megtalálható a forrásokban.' : 'Az idézet legyen szó szerinti mondat a forrásokból – vedd át a kiemeléseidből.')+li(c3, c3 ? 'A forrásmegjelölés megnevezi a beszélőt.' : 'Add meg, ki mondta (név), és milyen ülésen, mikor.')+li(c4, c4 ? 'A zárókérdés valódi kérdés.' : 'A zárókérdés legyen kérdőjellel végződő, gondolkodtató kérdés.')+li(c5, c5 ? 'Belefér a 35 másodpercbe (≈ '+s+' mp).' : (s>35 ? 'Túl hosszú (≈ '+s+' mp) – rövidíts, legfeljebb kb. 80 szó.' : 'Túl rövid (≈ '+s+' mp) – töltsd ki mind a négy szakaszt.'))+'</ul>';
+  var m = t.key.tiktok;
+  body += '<div class="key-box"><p><b>Helyes megoldás felépítése:</b> horog + szó szerinti idézet forrásmegjelöléssel + rövid magyarázat + zárókérdés, legfeljebb 35 mp.</p><p><b>Mintaterv:</b><br>Horog: '+esc(m.hook)+'<br>Idézet: <q>'+esc(m.quote.replace(/[„”]/g,''))+'</q> ('+esc(m.who)+')<br>Magyarázat: '+esc(m.explain)+'<br>Zárókérdés: '+esc(m.close)+'</p></div>';
+  fb(tid+'-3', v[0], v[1], body);
+}
+
+/* ---------- Események ---------- */
+document.addEventListener('input', function(e){
+  var id = e.target.getAttribute && e.target.getAttribute('data-store');
+  if (!id) return;
+  state.f[id] = e.target.value; setPv(id); save();
+  var m = id.match(/^(t\d)-(hook|quote|explain|close)$/); if (m) refreshMeter(m[1]);
+});
+document.addEventListener('change', function(e){
+  var el = e.target;
+  if (el.matches('[data-cardbox]')){ var p = el.getAttribute('data-cardbox').split(':'); state.cards[p[0]] = state.cards[p[0]] || {}; if (el.checked) state.cards[p[0]][p[1]] = true; else delete state.cards[p[0]][p[1]]; el.closest('.term').classList.toggle('on', el.checked); refreshCards(p[0]); save(); }
+  else if (el.matches('input[type=radio][name$="-quiz"]')){ var tid = el.name.replace('-quiz',''); state.quiz[tid] = +el.value; save(); showQuiz(tid); }
+  else if (el.matches('[data-qsel]')){ var s = SENT[el.value]; if (!s) return; var tid2 = el.getAttribute('data-qsel');
+    setField(tid2+'-quote', '„'+s.text+'”'); setField(tid2+'-who', s.speaker+', '+s.src.ctx.split('·').slice(0,2).join('·').trim()); refreshMeter(tid2); el.value=''; }
+  else if (el.id==='teacherToggle'){ state.teacher = el.checked; save(); applyView(); }
+});
+function setField(id, v){ var el = document.getElementById(id); el.value = v; state.f[id] = v; setPv(id); save(); }
+function toggleS(el){ var id = el.getAttribute('data-s'); if (state.hl[id]) delete state.hl[id]; else state.hl[id] = true; el.classList.toggle('hl', !!state.hl[id]); el.setAttribute('aria-pressed', String(!!state.hl[id])); refreshHl(SENT[id].t); save(); }
+document.addEventListener('keydown', function(e){ if ((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('s')){ e.preventDefault(); toggleS(e.target); } });
+
+document.addEventListener('click', function(e){
+  var s = e.target.closest('.s'); if (s){ toggleS(s); return; }
+  var tb = e.target.closest('[data-table-btn]');
+  if (tb){ state.table = tb.getAttribute('data-table-btn'); save(); applyView(); var sec = $('#'+state.table); var y = sec.getBoundingClientRect().top + window.scrollY - $('.controls').offsetHeight - 8; if (state.view==='all' || window.scrollY > y) window.scrollTo({top:y, behavior:'smooth'}); return; }
+  var vbt = e.target.closest('[data-view]'); if (vbt){ state.view = vbt.getAttribute('data-view'); save(); applyView(); return; }
+  var un = e.target.closest('[data-unhl]'); if (un){ var sid = un.getAttribute('data-unhl'); delete state.hl[sid]; var se = $('[data-s="'+sid+'"]'); se.classList.remove('hl'); se.setAttribute('aria-pressed','false'); refreshHl(SENT[sid].t); save(); return; }
+  var uc = e.target.closest('[data-uncard]'); if (uc){ var p = uc.getAttribute('data-uncard').split(':'); delete state.cards[p[0]][p[1]]; var cb = $('[data-cardbox="'+p[0]+':'+p[1]+'"]'); cb.checked = false; cb.closest('.term').classList.remove('on'); refreshCards(p[0]); save(); return; }
+  var a = e.target.closest('[data-act]'); if (!a) return;
+  var act = a.getAttribute('data-act'), tid = a.getAttribute('data-t');
+  if (act==='check1') check1(tid);
+  else if (act==='check2') check2(tid);
+  else if (act==='check3') check3(tid);
+  else if (act==='hl-insert'){ var list = hlOf(tid); if (!list.length){ fb(tid+'-1','part','Nincs még kiemelés','<p>Kattints a forrásokban arra a mondatra, amelyben szerinted ütközik két szándék vagy álláspont, majd próbáld újra.</p>'); return; }
+    var cur = state.f[tid+'-clash'] || ''; var add = list.map(function(x){ return '„'+x.text+'” ('+x.speaker+')'; }).filter(function(q){ return cur.indexOf(q)===-1; }).join('\n'); setField(tid+'-clash', (cur ? cur.replace(/\s+$/,'')+'\n' : '') + add); }
+  else if (act==='hl-clear'){ byId[tid].sents.forEach(function(x){ delete state.hl[x.id]; }); $$('.s', $('#'+tid)).forEach(function(x){ x.classList.remove('hl'); x.setAttribute('aria-pressed','false'); }); refreshHl(tid); save(); }
+  else if (act==='tt-model'){ var m = byId[tid].key.tiktok; fb(tid+'-3','part','Mintaterv (javítási kulcs)','<p>Horog: '+esc(m.hook)+'<br>Idézet: <q>'+esc(m.quote.replace(/[„”]/g,''))+'</q> ('+esc(m.who)+')<br>Magyarázat: '+esc(m.explain)+'<br>Zárókérdés: '+esc(m.close)+'</p><p style="margin:0"><i>Saját tervet írj – a minta csak a felépítést mutatja.</i></p>'); }
+  else if (act==='print'){ doPrint(); }
+  else if (act==='preview-on'){ previewOn = true; preparePrint(); document.body.classList.add('printing'); window.scrollTo(0,0); }
+  else if (act==='preview-off'){ previewOn = false; document.body.classList.remove('printing'); }
+  else if (act==='qr'){ openQr(); }
+  else if (act==='qr-close'){ $('#qrDialog').close(); }
+  else if (act==='qr-download'){ var url = currentQrUrl(); var c = drawQr(url, true); var link = document.createElement('a'); link.download = 'qr-kadar-rendszer-bukasa-world-cafe.png'; link.href = c.toDataURL('image/png'); document.body.appendChild(link); link.click(); link.remove(); }
+  else if (act==='qr-copy'){ var u = currentQrUrl(); if (navigator.clipboard) navigator.clipboard.writeText(u).then(function(){ a.textContent = 'Kimásolva'; setTimeout(function(){ a.textContent = 'Cím másolása'; }, 1600); }); }
+  else if (act==='qr-print'){ var w = window.open('', '_blank'); if (!w) return; var img = drawQr(currentQrUrl(), true).toDataURL('image/png');
+    w.document.write('<!doctype html><html lang="hu"><head><meta charset="utf-8"><title>QR-kód – World Café</title><style>body{font-family:Georgia,serif;text-align:center;padding:40px}img{width:320px;image-rendering:pixelated}p{font-size:14px;word-break:break-all}</style></head><body><img src="'+img+'" alt="QR-kód"><p>'+esc(currentQrUrl())+'</p><script>window.onload=function(){window.print()}<\/script></body></html>'); w.document.close(); }
+  else if (act==='reset'){ if (confirm('Biztosan törlöd az összes beírt választ, kiemelést és jelölést ezen az eszközön?')){ localStorage.removeItem(STORE); location.reload(); } }
+});
+
+/* ---------- Nyomtatás ---------- */
+function preparePrint(){
+  $$('[data-store]').forEach(function(el){ setPv(el.getAttribute('data-store')); });
+  var who = [state.f['st-name'], state.f['st-class'], state.f['st-date']].filter(Boolean).join(' · ');
+  $('#printWho').textContent = who || 'Név: ____________________  Osztály: ______  Dátum: __________';
+  var url = currentQrUrl(); $('#printUrl').textContent = url.replace(/^https?:\/\//,'');
+  $('#printQr').src = drawQr(url, false).toDataURL('image/png');
+}
+function doPrint(){ preparePrint(); document.body.classList.add('printing'); setTimeout(function(){ window.print(); }, 60); }
+var previewOn = false;
+window.addEventListener('beforeprint', function(){ preparePrint(); document.body.classList.add('printing'); });
+window.addEventListener('afterprint', function(){ if (!previewOn) document.body.classList.remove('printing'); });
+
+/* ---------- QR-kód ---------- */
+function defaultUrl(){
+  var here = location.href.split('#')[0];
+  var local = location.protocol==='file:' || /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname);
+  return (local && PUBLIC_URL) ? PUBLIC_URL : here;
+}
+function currentQrUrl(){ return (state.qrUrl || defaultUrl()).trim(); }
+function drawQr(url, caption, canvas){
+  var qr = qrcode(0, 'M'); qr.addData(url); qr.make();
+  var n = qr.getModuleCount(), sc = 10, m = 4, size = (n + m*2) * sc, extra = caption ? 64 : 0;
+  var W = caption ? Math.max(size, 560) : size, ox = Math.round((W - size)/2);
+  var c = canvas || document.createElement('canvas'); c.width = W; c.height = size + extra;
+  var g = c.getContext('2d'); g.fillStyle = '#ffffff'; g.fillRect(0,0,c.width,c.height); g.fillStyle = '#1f1c18';
+  for (var r=0;r<n;r++) for (var k=0;k<n;k++) if (qr.isDark(r,k)) g.fillRect(ox+(k+m)*sc, (r+m)*sc, sc, sc);
+  if (caption){ g.fillStyle = '#7b1e2b'; g.textAlign = 'center'; g.font = '600 22px Spectral, Georgia, serif'; g.fillText('A Kádár-rendszer bukása · World Café', W/2, size + 18); g.fillStyle = '#463f36'; g.font = '15px "Source Sans 3", Arial, sans-serif'; g.fillText(url.replace(/^https?:\/\//,'').slice(0,70), W/2, size + 44); }
+  return c;
+}
+function openQr(){
+  var inp = $('#qrUrl'); inp.value = currentQrUrl(); renderQr();
+  var d = $('#qrDialog'); if (d.showModal) d.showModal(); else d.setAttribute('open','');
+}
+function renderQr(){
+  var url = currentQrUrl();
+  $('#qrWarn').hidden = !(/^file:/.test(url) || /\/\/(localhost|127\.|0\.0\.0\.0)/.test(url));
+  try { drawQr(url, true, $('#qrCanvas')); } catch(err) {}
+}
+$('#qrUrl').addEventListener('input', function(e){ state.qrUrl = e.target.value === defaultUrl() ? '' : e.target.value; save(); renderQr(); });
+
+applyView();
+restoreFields();
+
+</script>
+</body>
+</html>
